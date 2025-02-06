@@ -1,0 +1,219 @@
+# DRIVER:	LICENSES
+BCM-0bb4-0306:
+snd-korg1212:
+snd-maestro3:
+snd-ymfpci:
+advansys:
+qla1280:
+kaweth:
+dvb-ttusb-budget:
+keyspan:
+keyspan_pda:	GPL-2.0-or-later
+emi26:
+emi62:
+ti_usb_3410_5052: GPL-2.0-or-later
+whiteheat:	GPL-2.0-only
+cpia2:		GPL-2.0-or-later
+dabusb:
+vicam:
+io_edgeport:	GPL-2.0-or-later
+io_ti:
+dsp56k:		GPL-2.0-or-later
+snd-sb16-csp:	GPL-2.0-or-later
+qla2xxx:
+orinoco:
+ar9170:
+ath9k_htc:
+cassini:
+slicoss:
+sxg:
+cxgb3:		GPL-2.0-only SUSE-Firmware
+cxgb4:
+e100:
+acenic:
+tg3:
+starfire:	GPL-2.0-only
+libertas:
+mwl8k:
+mwifiex:
+iwlwifi:
+atomisp:
+ipu3-imgu:
+intel-ipu6-isys:
+mei-vsc-hw:
+ixp4xx-npe:
+tehuti:
+typhoon:
+yam:
+pcnet_cs:	GPL-2.0-only MPL-1.0
+3c589_cs:	GPL-2.0-only MPL-1.0
+3c574_cs:	GPL-2.0-only MPL-1.0
+serial_cs:	GPL-2.0-only MPL-1.0 GPL-3.0-only
+smc91c92_cs:	GPL-2.0-only
+cx231xx:
+cx23418:
+cx23885:
+cx23840:
+qlogicpti:
+myri_sbus:
+bnx2x:
+bnx2:
+netxen_nic:
+dvb-ttpci:	GPL-2.0-or-later
+snd-wavefront:	GPL-2.0-or-later
+rt61pci:
+rt73usb:
+mt7601u:
+rt2800pci:
+rt2860sta:
+rt2800usb:
+rt2870sta:
+usbdux/usbduxfast/usbduxsigma: GPL-2.0-only
+xc4000:
+xc5000:
+dib0700:
+ath3k:
+mga:		MIT
+r128:		MIT
+radeon:		MIT
+en8811h:
+amdgpu:
+amdxdna:
+amd_pmf:
+s2255drv:
+rtl8192e:
+lgs8gxx:
+ib_qib:		GPL-2.0-only
+qed:
+ueagle-atm:
+vxge:
+brcmsmac:
+brcmfmac:	GPL-2.0-only SUSE-Firmware
+wl1251:
+wl12xx:
+wl18xx:
+cc33xx:
+TI_ST:
+tlg2300:
+r8712u:
+rtl8192ce:
+rtl8192cu:
+rtl8192se:
+rtl8192de:
+rtl8192du:
+rtl8723e:
+rtl8723be:
+rtl8723de:
+r8723au:
+rtl8188ee:
+rtl8188eu:
+rtl8821ae:
+rtl8822be:
+rtw88:
+rtl8192ee:
+rtl8723bs:
+rtl8xxxu:
+r8169:
+rt1320:
+vt6656:
+DFU:
+Atheros:
+ath6kl:
+ath10k:
+ath11k:
+ath12k:
+myri10ge:
+drxk:
+ene-ub6250
+isci:		GPL-2.0-only
+ar5523:
+s5p-mfc:
+carl9170:	GPL-2.0-only
+snd-hda-codec-ca0132:
+btusb:
+btmtk_usb:
+rp2:
+go7007:
+ccp:
+microcode_amd:
+mxu11x0:
+mxuport:
+cw1200:
+BFA/BNA:
+qat:
+rsi:
+xhci-rcar:
+snd_soc_sst_acpi:
+as102:
+it9135:
+snd_soc_catpt:
+snd_soc_avs:
+snd_intel_sst_core:
+snd-soc-skl:
+smsmdtv:
+xhci-tegra:
+tegra-vic:
+atusb:		GPL-2.0-or-later
+qca:
+liquidio:
+nitrox:
+i915:
+nouveau:
+xe:
+wilc1000:
+hfi1:
+knav_qmss_queue:
+mwlwifi:
+mtk-vpu:
+mtk_scp:
+btmtk:
+rk3399-dptx:
+mt76x0:
+mt76x2e:
+mt76x2u:
+mt7615e:
+mt7920:
+mt7921:
+mt7922:
+mt7925:
+mt7988:
+mt7996e:
+mtk_wed:
+nfp:
+wil6210:
+venus:
+iris:
+imx-sdma:
+adreno:
+qcom_q6v5_pas:
+qcom_q6v5_mss:
+mlxsw_spectrum:	GPL-2.0-only SUSE-Firmware
+cdns-mhdp:
+fsl-mc:
+mscc-phy:
+meson-vdec:
+prestera:
+lt9611uxc:
+wfx:
+wave5:
+rvu_cptpf:
+amphion:
+cs35l41_hda:
+cs35l56:
+cs42l43:
+mtk-sof:
+nxp-sr1xx:
+btnxpuart:
+qcom-sc8280xp:
+amlogic:
+powervr:
+qcom-sm8550:
+qcom-sm8650:
+ti-tas2781:
+ti-tas2563:
+Mont-TSSE:
+panthor:
+isp:
+qaic:
+ish:
+qdu100:

@@ -1,0 +1,219 @@
+# DRIVER:	LICENSES
+BCM-0bb4-0306:	LICENCE.cypress
+snd-korg1212:
+snd-maestro3:
+snd-ymfpci:
+advansys:
+qla1280:	LICENCE.qla1280
+kaweth:		LICENCE.kaweth
+dvb-ttusb-budget:
+keyspan:	GPL-2 GPL-3
+keyspan_pda:	GPL-2 GPL-3
+emi26:
+emi62:
+ti_usb_3410_5052:
+whiteheat:
+cpia2:
+dabusb:
+vicam:
+io_edgeport:
+io_ti:
+dsp56k:		GPL-2 GPL-3
+snd-sb16-csp:
+qla2xxx:	LICENCE.qla2xxx
+orinoco:	LICENCE.agere
+ar9170:		LICENCE.atheros_firmware
+ath9k_htc:	LICENCE.atheros_firmware LICENCE.open-ath9k-htc-firmware
+cassini:
+slicoss:
+sxg:
+cxgb3:
+cxgb4:		LICENCE.chelsio_firmware
+e100:		LICENCE.e100
+acenic:
+tg3:
+starfire:
+libertas:	LICENCE.Marvell LICENCE.OLPC
+mwl8k:		LICENCE.Marvell
+mwifiex:	LICENCE.NXP
+iwlwifi:	LICENCE.iwlwifi_firmware
+atomisp:	LICENSE.ivsc
+ipu3-imgu:	LICENSE.ipu3_firmware
+intel-ipu6-isys: LICENSE.ivsc
+mei-vsc-hw:	LICENSE.ivsc
+cx231xx:
+ixp4xx-npe:	LICENSE.ixp4xx
+tehuti:
+typhoon:
+yam:
+pcnet_cs:
+3c589_cs:
+3c574_cs:
+serial_cs:	GPL-3
+smc91c92_cs:
+cx23418:
+cx23885:
+cx23840:
+qlogicpti:
+myri_sbus:
+bnx2x:
+bnx2:
+netxen_nic:	LICENCE.phanfw
+dvb-ttpci:	GPL-2 GPL-3
+snd-wavefront:
+rt61pci:	LICENCE.ralink-firmware.txt
+rt73usb:	LICENCE.ralink-firmware.txt
+mt7601u:	LICENCE.ralink_a_mediatek_company_firmware
+rt2800pci:	LICENCE.ralink-firmware.txt
+rt2860sta:	LICENCE.ralink-firmware.txt
+rt2800usb:	LICENCE.ralink-firmware.txt
+rt2870sta:	LICENCE.ralink-firmware.txt
+usbdux/usbduxfast/usbduxsigma: GPL-2
+xc4000:		LICENCE.xc4000
+xc5000:		LICENCE.xc5000 LICENCE.xc5000c
+dib0700:	LICENSE.dib0700
+ath3k:		LICENCE.atheros_firmware
+mga:
+r128:
+radeon:		LICENSE.radeon
+en8811h:	LICENSE.airoha
+amdgpu:		LICENSE.amdgpu
+amdxdna:	LICENSE.amdnpu
+amd_pmf:	LICENSE.amd_pmf
+s2255drv:
+rtl8192e:
+lgs8gxx:
+ib_qib:
+qed:
+ueagle-atm:	LICENCE.ueagle-atm4-firmware
+vxge:
+brcmsmac:	LICENCE.broadcom_bcm43xx
+brcmfmac:	LICENCE.broadcom_bcm43xx LICENCE.cypress GPL-2
+wl1251:		LICENCE.wl1251
+wl12xx:		LICENCE.ti-connectivity
+wl18xx:		LICENCE.ti-connectivity
+cc33xx:		LICENCE.ti-connectivity
+TI_ST:		LICENCE.ti-connectivity
+tlg2300:
+r8712u:		LICENCE.rtlwifi_firmware.txt
+rtl8192ce:	LICENCE.rtlwifi_firmware.txt
+rtl8192cu:	LICENCE.rtlwifi_firmware.txt
+rtl8192se:	LICENCE.rtlwifi_firmware.txt
+rtl8192de:	LICENCE.rtlwifi_firmware.txt
+rtl8192du:	LICENCE.rtlwifi_firmware.txt
+rtl8723e:	LICENCE.rtlwifi_firmware.txt
+rtl8723be:	LICENCE.rtlwifi_firmware.txt
+rtl8723de:	LICENCE.rtlwifi_firmware.txt
+r8723au:	LICENCE.rtlwifi_firmware.txt
+rtl8188ee:	LICENCE.rtlwifi_firmware.txt
+rtl8188eu:	LICENCE.rtlwifi_firmware.txt
+rtl8821ae:	LICENCE.rtlwifi_firmware.txt
+rtl8822be:	LICENCE.rtlwifi_firmware.txt
+rtw88:		LICENCE.rtlwifi_firmware.txt rtw88/README
+rtl8192ee:	LICENCE.rtlwifi_firmware.txt
+rtl8723bs:	LICENCE.rtlwifi_firmware.txt
+rtl8xxxu:	LICENCE.rtlwifi_firmware.txt
+r8169:
+rt1320:
+vt6656:		LICENCE.via_vt6656
+DFU:		LICENCE.atheros_firmware LICENSE.QualcommAtheros_ar3k
+Atheros:	LICENCE.atheros_firmware
+ath6kl:		LICENCE.atheros_firmware
+ath10k:		ath10k/QCA988X/hw2.0/notice_ath10k_firmware-4.txt ath10k/QCA988X/hw2.0/notice_ath10k_firmware-5.txt ath10k/QCA6174/hw3.0/notice_ath10k_firmware-6.txt ath10k/QCA6174/hw3.0/notice_ath10k_firmware-sdio-6.txt ath10k/QCA9377/hw1.0/notice_ath10k_firmware-sdio-5.txt LICENSE.QualcommAtheros_ath10k
+ath11k:		ath11k/IPQ6018/hw1.0/Notice.txt LICENSE.QualcommAtheros_ath10k
+ath12k:		ath12k/WCN7850/hw2.0/Notice.txt LICENSE.QualcommAtheros_ath10k
+myri10ge:	LICENCE.myri10ge_firmware
+drxk:
+ene-ub6250:	LICENCE.ene_firmware
+isci:		GPL-2
+ar5523:		LICENCE.atheros_firmware
+s5p-mfc:
+carl9170:	GPL-2
+snd-hda-codec-ca0132: LICENCE.ca0132
+btusb:		LICENCE.ibt_firmware LICENCE.rtlwifi_firmware.txt
+btmtk_usb:	LICENCE.ralink_a_mediatek_company_firmware
+rp2:
+go7007:		LICENCE.go7007
+ccp:		LICENSE.amd-sev
+microcode_amd:	LICENSE.amd-ucode amd-ucode/README
+mxu11x0:	LICENCE.moxa
+mxuport:	LICENCE.moxa
+cw1200:		LICENCE.cw1200
+BFA/BNA:
+qat:		LICENCE.qat_firmware
+rsi:
+xhci-rcar:	LICENCE.r8a779x_usb3
+snd_soc_sst_acpi: LICENCE.IntcSST2
+as102:		LICENCE.Abilis
+it9135:		LICENCE.it913x
+snd_soc_catpt:	LICENCE.IntcSST2
+snd_soc_avs:	LICENCE.adsp_sst
+snd_intel_sst_core: LICENCE.fw_sst_0f28
+snd-soc-skl:	LICENCE.adsp_sst
+smsmdtv:	LICENCE.siano
+xhci-tegra:	LICENCE.nvidia
+tegra-vic:	LICENCE.nvidia
+atusb:		GPL-2 GPL-3
+qca:		LICENSE.QualcommAtheros_ath10k qca/NOTICE.txt
+liquidio:	LICENCE.cavium_liquidio
+nitrox:		LICENCE.cavium
+i915:		LICENSE.i915
+nouveau:	LICENCE.nvidia
+xe:		LICENSE.xe
+wilc1000:	LICENSE.atmel
+hfi1:		LICENSE.hfi1_firmware
+knav_qmss_queue: LICENCE.ti-keystone
+mwlwifi:	LICENCE.Marvell
+mtk-vpu:	LICENCE.mediatek
+mtk_scp:	LICENCE.mediatek
+btmtk:		LICENCE.mediatek
+rk3399-dptx:	LICENCE.rockchip
+mt76x0:		LICENCE.mediatek
+mt76x2e:	LICENCE.ralink_a_mediatek_company_firmware
+mt76x2u:	LICENCE.mediatek
+mt7615e:	LICENCE.mediatek
+mt7920:		LICENCE.mediatek
+mt7921:		LICENCE.mediatek
+mt7922:		LICENCE.mediatek
+mt7925:		LICENCE.mediatek
+mt7988:		LICENCE.mediatek
+mt7996e:	LICENCE.mediatek
+mtk_wed:	LICENCE.mediatek
+nfp:		LICENCE.Netronome
+wil6210:	LICENSE.QualcommAtheros_ath10k
+venus:		LICENSE.qcom qcom/NOTICE.txt
+iris:		LICENSE.qcom qcom/NOTICE.txt
+imx-sdma:	LICENSE.sdma_firmware
+adreno:		LICENSE.qcom qcom/NOTICE.txt
+qcom_q6v5_pas:	LICENSE.qcom-2 qcom/NOTICE.txt
+qcom_q6v5_mss:	LICENSE.qcom qcom/NOTICE.txt
+mlxsw_spectrum:
+cdns-mhdp:	LICENCE.cadence
+fsl-mc:		LICENSE.nxp_mc_firmware
+mscc-phy:	LICENCE.microchip
+meson-vdec:	LICENSE.amlogic_vdec
+prestera:	LICENCE.Marvell
+lt9611uxc:	LICENSE.Lontium
+wfx:		wfx/LICENCE.wf200
+wave5:		LICENCE.cnm
+rvu_cptpf:	LICENCE.Marvell
+amphion:	LICENSE.amphion_vpu
+cs35l41_hda:	LICENSE.cirrus
+cs35l56:	LICENSE.cirrus
+cs42l43:	LICENSE.cirrus
+mtk-sof:	LICENCE.mediatek
+nxp-sr1xx:	LICENSE.nxp
+btnxpuart:	LICENSE.nxp
+qcom-sc8280xp:	LICENCE.linaro
+amlogic:	LICENSE.amlogic
+powervr:	LICENSE.powervr
+qcom-sm8550:	LICENCE.linaro
+qcom-sm8650:	LICENCE.linaro
+ti-tas2781:	LICENCE.ti-tspa
+ti-tas2563:	LICENCE.ti-tspa
+Mont-TSSE:	LICENSE.montage
+panthor:	LICENCE.mali_csffw
+isp:		LICENSE.amdisp
+qaic:		LICENSE.qcom qcom/NOTICE.txt
+ish:		LICENCE.ish
+qdu100:		LICENSE.qcom qcom/NOTICE.txt

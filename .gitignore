@@ -1,0 +1,5 @@
+*~
+*.orig
+.projconf
+specs
+linux-firmware
