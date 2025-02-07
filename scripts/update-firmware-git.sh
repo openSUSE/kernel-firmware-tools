@@ -92,6 +92,13 @@ pkgname () {
     fi
 }
 
+if [ -d .git ]; then
+    kftpfx=$(git describe --tags HEAD | tr - .)
+    kfttar=kernel-firmware-tools-$kftpfx.tar.xz
+else
+    kfttar=kernel-firmware-tools.tar.xz
+fi
+
 update_topic () {
     local topic="$1"
     local git_changed=""
@@ -176,7 +183,7 @@ update_topic () {
     fi
 
     # generate the new spec file
-    scripts/make-topic-spec.sh "$topic" "$specver" "$speccommit" "$specdir"
+    scripts/make-topic-spec.sh "$topic" "$specver" "$speccommit" "$specdir" "$kfttar"
 
     # create a new firmware tarball
     if [ -n "$git_changed" ]; then
@@ -186,7 +193,8 @@ update_topic () {
     fi
 
     # create kernel-firmware-tools.tar.xz
-    scripts/kft.py -C "$gitroot" archive-tools "$specdir/kernel-firmware-tools.tar.xz"
+    rm -f "$specdir"/kernel-firmware-tools*.tar.xz
+    scripts/kft.py -C "$gitroot" archive-tools "$specdir/$kfttar"
 
     (cd "$specdir"; osc addremove)
     if [ -z "$nocommit" ]; then
