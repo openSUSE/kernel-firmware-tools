@@ -17,6 +17,7 @@ usage () {
     exit 1
 }
 
+gitroot=linux-firmware
 head=HEAD
 
 test -f .projconf && . .projconf
