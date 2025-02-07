@@ -120,7 +120,7 @@ update_topic () {
         if [ -f "$specdir/aliases" ]; then
 	    oldalias=$(md5sum "$specdir/aliases" | awk '{print $1}')
 	else
-	    oldalias=$(osc cat "$obsproj/$name/aliases" | awk '{print $1}')
+	    oldalias=$(osc cat "$obsproj/$name/aliases" | md5sum | awk '{print $1}')
 	fi
 
 	newalias=$(md5sum "$topic/aliases" | awk '{print $1}')
