@@ -30,6 +30,7 @@ Release:        0
 Group:          System/Kernel
 URL:            https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/
 Source0:        @@PKGNAME@@-%{version}.tar.xz
+# URL:          https://github.com/openSUSE/kernel-firmware-tools/
 Source1:        kernel-firmware-tools.tar.xz
 Source2:        @@PKGNAME@@-rpmlintrc
 Source3:        git_id
