@@ -9,6 +9,7 @@ usage () {
     echo "  -C DIR: git root directory"
     echo "  -c GIT_ID: git ID to look at (HEAD as default)"
     echo "  -P proj: OBS project name"
+    echo "  -V: only verify the changes, not updating"
     echo "  -r: don't pull linux-firmware git tree"
     echo "  -n: don't commit for OBS"
     echo "  -b: branch packages at updating"
@@ -22,7 +23,7 @@ head=HEAD
 
 test -f .projconf && . .projconf
 
-while getopts C:c:P:rnbfm: opt; do
+while getopts C:c:P:Vrnbfm: opt; do
     case "$opt" in
 	C)
 	    gitroot="$OPTARG";;
@@ -30,6 +31,8 @@ while getopts C:c:P:rnbfm: opt; do
 	    head="$OPTARG";;
 	P)
 	    obsproj="$OPTARG";;
+	V)
+	    onlyverify=1;;
 	r)
 	    nopull=1;;
 	n)
@@ -151,6 +154,18 @@ update_topic () {
 	# keep the old commit
 	speccommit=$commit
     fi
+    shorthead=${newhead:0:12}
+
+    if [ -n "$onlyverify" ]; then
+	if [ -n "$git_changed" ]; then
+	    echo "To be updated version $specver (git commit $shorthead) for $topic:"
+	    scripts/kft.py -C "$gitroot" changelog $topic $commit $newhead
+	fi
+	if [ -n "$alias_changed" ]; then
+	    echo "Aliases updated for $topic"
+	fi
+	return
+    fi
 
     if [ ! -d "$specdir" ]; then
 	mkdir -p specs
@@ -166,7 +181,6 @@ update_topic () {
     # add changelog
     rm -f /tmp/COMMIT.$$
     if [ -n "$git_changed" ]; then
-	shorthead=${newhead:0:12}
 	echo "- Update to version $specver (git commit $shorthead):" >> /tmp/COMMIT.$$
 	scripts/kft.py -C "$gitroot" changelog $topic $commit $newhead >> /tmp/COMMIT.$$
     fi

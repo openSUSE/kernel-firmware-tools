@@ -139,6 +139,13 @@ to use those contents instead of the OBS project. Update the `specs/*`
 appropriately beforehand, or remove all `specs/*` contents beforehand,
 so that the latest stuff gets downloaded at running the script.
 
+### Inspection without updates
+
+For inspecting the changes without updating the OBS spec packages,
+pass `-V` option to `update-firmware-git.sh`. It'll perform git-pull
+(unless `-r` option is given), compare the aliases and the updated git
+contents, then show what are changed and not.
+
 ### New drivers in linux-firmware.git
 
 When the linux-firmware git contains some new drivers that aren't
