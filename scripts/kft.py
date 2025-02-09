@@ -284,24 +284,22 @@ def list_topic_aliases(topic):
     l.sort()
     return l
 
-def update_alias():
-    """Return the function to update alias, to be passed to scan_firmware()"""
-    def __update_alias(ko, name):
-        if modmap.get(name) != None:
-            for f in modinfo(ko, 'alias'):
-                if f == '':
-                    continue
-                if re.match(r'^acpi', f):
-                    f = re.sub(r'([^:]*):([^:]*)$', r'\1%3A\2', f)
-                if aliases.get(name) == None:
-                    aliases[name] = []
-                if not f in aliases[name]:
-                    aliases[name].append(f)
-                    alias_dirty[modmap[name]] = True
-                    print('adding alias', name, f)
-    return __update_alias
+def add_matching_aliases(ko, name):
+    """Append to aliases list if the module is matching to the topics"""
+    if modmap.get(name) != None:
+        for f in modinfo(ko, 'alias'):
+            if f == '':
+                continue
+            if re.match(r'^acpi', f):
+                f = re.sub(r'([^:]*):([^:]*)$', r'\1%3A\2', f)
+            if aliases.get(name) == None:
+                aliases[name] = []
+            if not f in aliases[name]:
+                aliases[name].append(f)
+                alias_dirty[modmap[name]] = True
+                print('adding alias', name, f)
 
-def scan_firmware_dir(dir, proc):
+def scan_firmware_dir(dir):
     for root, dirs, files in os.walk(dir):
         for p in files:
             ko = os.path.join(root, p)
@@ -311,22 +309,22 @@ def scan_firmware_dir(dir, proc):
                 continue
             name = re.sub(r'\.ko$', '', name)
             name = canon_module(name)
-            proc(ko, name)
+            add_matching_aliases(ko, name)
 
-def scan_firmware_rpm(rpm, proc):
+def scan_firmware_rpm(rpm):
     if not kernel_binary_rpm(rpm):
         return
     with tempfile.TemporaryDirectory() as dir:
         subprocess.call('rpm2cpio ' + rpm + ' | cpio -i --make-directories -D ' + dir,
                         shell=True)
-        scan_firmware_dir(dir, proc)
+        scan_firmware_dir(dir)
 
-def scan_firmware(arg, proc):
+def update_aliases(arg):
     """Scan the given RPM or directory and update aliases"""
     if os.path.isdir(arg):
-        scan_firmware_dir(arg, proc)
+        scan_firmware_dir(arg)
     else:
-        scan_firmware_rpm(arg, proc)
+        scan_firmware_rpm(arg)
 
 def check_whence(repo, commit):
     """Check WHENCE file and verify whether it contains unknown drivers"""
@@ -444,7 +442,7 @@ if __name__ == '__main__':
         for topic in topic_list:
             read_topic_aliases(topic)
         for arg in args:
-            scan_firmware(arg, update_alias())
+            update_aliases(arg)
         if len(alias_dirty) > 0:
             for topic in sorted(alias_dirty.keys()):
                 print('Updating aliases for', topic)
