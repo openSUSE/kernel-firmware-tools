@@ -273,17 +273,6 @@ def modinfo(ko, attr):
     """get the modinfo output for the attr"""
     return subprocess.check_output(['/usr/sbin/modinfo', '-F', attr, ko]).decode('utf-8').split('\n')
 
-def list_topic_aliases(topic):
-    """List the list of aliases for the given topic"""
-    l = []
-    for m in aliases.keys():
-        t = modmap.get(m)
-        if t == topic:
-            for p in aliases[m]:
-                l.append(p)
-    l.sort()
-    return l
-
 def add_matching_aliases(ko, name):
     """Append to aliases list if the module is matching to the topics"""
     if modmap.get(name) != None:
