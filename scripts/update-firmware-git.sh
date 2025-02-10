@@ -156,6 +156,8 @@ update_topic () {
     fi
     shorthead=${newhead:0:12}
 
+    specver=$(scripts/kft.py -C "$gitroot" commit-version $speccommit)
+
     if [ -n "$onlyverify" ]; then
 	if [ -n "$git_changed" ]; then
 	    echo "To be updated version $specver (git commit $shorthead) for $topic:"
@@ -175,8 +177,6 @@ update_topic () {
 	    (cd specs; osc co "$obsproj/$name")
 	fi
     fi
-
-    specver=$(scripts/kft.py -C "$gitroot" commit-version $speccommit)
 
     # add changelog
     rm -f /tmp/COMMIT.$$
