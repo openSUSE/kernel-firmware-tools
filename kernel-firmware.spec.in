@@ -29,10 +29,10 @@ Release:        0
 @@LICENSE@@
 Group:          System/Kernel
 URL:            https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/
-Source0:        @@PKGNAME@@-%{version}.tar.xz
+Source0:        %{name}-%{version}.tar.xz
 # URL:          https://github.com/openSUSE/kernel-firmware-tools/
 Source1:        @@KFTTAR@@
-Source2:        @@PKGNAME@@-rpmlintrc
+Source2:        %{name}-rpmlintrc
 Source3:        git_id
 @@EXTRASRCS@@
 BuildRequires:  suse-module-tools
