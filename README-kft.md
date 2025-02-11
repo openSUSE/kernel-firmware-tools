@@ -181,3 +181,6 @@ https://github.com/openSUSE/kernel-firmware-tools
 ## License
 
 GPL-v2-or-later
+
+The firmware data included in each topic subdirectory follows the own
+licenses mentioned in each extrawhence* files.
