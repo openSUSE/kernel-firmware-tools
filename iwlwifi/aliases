@@ -324,6 +324,7 @@ iwlwifi: pci:v00008086d00002723sv*sd*bc*sc*i*
 iwlwifi: pci:v00008086d00002725sv*sd*bc*sc*i*
 iwlwifi: pci:v00008086d00002729sv*sd*bc*sc*i*
 iwlwifi: pci:v00008086d0000272Bsv*sd*bc*sc*i*
+iwlwifi: pci:v00008086d0000272Fsv*sd*bc*sc*i*
 iwlwifi: pci:v00008086d000030DCsv*sd*bc*sc*i*
 iwlwifi: pci:v00008086d00003165sv*sd00004010bc*sc*i*
 iwlwifi: pci:v00008086d00003165sv*sd00004012bc*sc*i*
