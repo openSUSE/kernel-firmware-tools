@@ -112,7 +112,7 @@ sed -e"s/@@PKGNAME@@/$pkgname/g" \
 	    cat $topic/topicprovs
 	fi
 	if [ -f $topic/aliases ]; then
-	    sed -e's/^.*: \(.*\)$/Supplements:    modalias(\1)/g' $topic/aliases
+	    sed -e's/^.*: \(.*\)$/Supplements:    modalias(\1)/g' $topic/aliases | sort -u
 	fi
 	echo
 	echo "%description"
