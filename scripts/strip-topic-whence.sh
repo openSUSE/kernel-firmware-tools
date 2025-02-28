@@ -31,6 +31,18 @@ while IFS="" read -r l; do
 	File:\ */README)
 	    continue
 	    ;;
+	File:\ */notice_ath*.txt)
+	    continue
+	    ;;
+	File:\ */notice.txt_wlanmdsp)
+	    continue
+	    ;;
+	File:\ */Notice.txt)
+	    continue
+	    ;;
+	File:\ */.notice)
+	    continue
+	    ;;
     esac
     if [ "$topic" = "$chosen" -o "$sub" = "xxx" ]; then
 	echo "$l"
