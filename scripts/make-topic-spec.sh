@@ -50,7 +50,7 @@ append_to_licenses () {
 }
 
 get_spdx () {
-    licenses="SUSE-Firmware AND GPL-2.0-or-later"
+    licenses="GPL-2.0-or-later AND SUSE-Firmware"
     while read drv args; do
 	drv=${drv%:}
 	test "${topicdefs[$drv]}" = "$topic" || continue
