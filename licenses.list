@@ -198,7 +198,7 @@ wfx:		wfx/LICENCE.wf200
 wave5:		LICENCE.cnm
 rvu_cptpf:	LICENCE.Marvell
 amphion:	LICENSE.amphion_vpu
-cs35l41_hda:	LICENSE.cirrus
+cs35l41:	LICENSE.cirrus
 cs35l56:	LICENSE.cirrus
 cs42l43:	LICENSE.cirrus
 mtk-sof:	LICENCE.mediatek
