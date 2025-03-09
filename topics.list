@@ -226,4 +226,5 @@ isp:		amdgpu		amdgpu
 qaic:		qcom
 ish:		intel		intel-ish-ipc
 qdu100:		qcom
+intel_vpu:	intel
 ast:		platform

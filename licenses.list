@@ -217,3 +217,4 @@ isp:		LICENSE.amdisp
 qaic:		LICENSE.qcom qcom/NOTICE.txt
 ish:		LICENCE.ish
 qdu100:		LICENSE.qcom qcom/NOTICE.txt
+intel_vpu:	LICENSE.intel_vpu
