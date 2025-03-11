@@ -117,7 +117,6 @@ sed -e"s/@@PKGNAME@@/$pkgname/g" \
 	echo
 	echo "%description"
 	echo "This package contains kernel firmware files for $desc."
-	echo
 	continue
     fi
 
