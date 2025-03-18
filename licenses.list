@@ -209,6 +209,7 @@ amlogic:	LICENSE.amlogic
 powervr:	LICENSE.powervr
 qcom-sm8550:	LICENCE.linaro
 qcom-sm8650:	LICENCE.linaro
+qcom-x1e80100:	LICENCE.linaro
 ti-tas2781:	LICENCE.ti-tspa
 ti-tas2563:	LICENCE.ti-tspa
 Mont-TSSE:	LICENSE.montage
