@@ -8,11 +8,10 @@ usage () {
     echo "usage: update-firmware-git.sh [-options] [TOPICS...]"
     echo "  -C DIR: git root directory"
     echo "  -c GIT_ID: git ID to look at (HEAD as default)"
-    echo "  -P proj: OBS project name"
+    echo "  -P org: gitea repo org name"
     echo "  -V: only verify the changes, not updating"
     echo "  -r: don't pull linux-firmware git tree"
-    echo "  -n: don't commit for OBS"
-    echo "  -b: branch packages at updating"
+    echo "  -n: don't commit for gitea repo"
     echo "  -f: force to build even if unchanged"
     echo "  -m: additional changelog text"
     exit 1
@@ -20,25 +19,24 @@ usage () {
 
 gitroot=linux-firmware
 head=HEAD
+srcoo=src.opensuse.org
+obsgitproj=kernel-firmware
+obsgitbranch=main
 
 test -f .projconf && . .projconf
 
-while getopts C:c:P:Vrnbfm: opt; do
+while getopts C:c:P:Vrnfm: opt; do
     case "$opt" in
 	C)
 	    gitroot="$OPTARG";;
 	c)
 	    head="$OPTARG";;
-	P)
-	    obsproj="$OPTARG";;
 	V)
 	    onlyverify=1;;
 	r)
 	    nopull=1;;
 	n)
 	    nocommit=1;;
-	b)
-	    dobranch=1;;
 	f)
 	    force=1;;
 	m)
@@ -53,19 +51,6 @@ shift $(($OPTIND - 1))
 if [ ! -d "$gitroot" ]; then
     echo "ERROR: No git root specified for linux-firmware"
     usage
-fi
-
-if [ -z "$obsproj" ]; then
-    echo "ERROR: Missing OBS project name"
-    usage
-fi
-
-oscuser=$(osc user)
-username=${oscuser%%:*}
-
-if [ -z "$username" ]; then
-    echo "No OBS user available"
-    exit 1
 fi
 
 if [ -n "$nopull" ]; then
@@ -87,12 +72,22 @@ if ! scripts/kft.py -C "$gitroot" check-whence "$head"; then
     test -z "$force" && exit 1
 fi
 
+cleanup () {
+    rm -f /tmp/COMMIT.$$
+    exit 1
+}
+trap cleanup 0
+
 pkgname () {
     if [ "$1" = "ucode-amd" ]; then
 	echo "$1"
     else
 	echo "kernel-firmware-$1"
     fi
+}
+
+get_src () {
+    curl -s "https://$srcoo/$obsgitproj/$1/raw/branch/$obsgitbranch/$2"
 }
 
 if [ -d .git ]; then
@@ -108,22 +103,18 @@ update_topic () {
     local alias_changed=""
 
     name=$(pkgname $topic)
-    if [ -n "$dobranch" ]; then
-	specdir="specs/home:$username:branches:$obsproj/$name"
-    else
-	specdir="specs/$obsproj/$name"
-    fi
+    specdir="specs/$name"
     if [ -f "$specdir/git_id" ]; then
 	commit=$(cat "$specdir/git_id")
     else
-	commit=$(osc cat "$obsproj/$name/git_id")
+	commit=$(get_src $name git_id)
     fi
 
     if [ -f "$topic/aliases" ]; then
         if [ -f "$specdir/aliases" ]; then
 	    oldalias=$(md5sum "$specdir/aliases" | awk '{print $1}')
 	else
-	    oldalias=$(osc cat "$obsproj/$name/aliases" | md5sum | awk '{print $1}')
+	    oldalias=$(get_src $name aliases | md5sum | awk '{print $1}')
 	fi
 
 	newalias=$(md5sum "$topic/aliases" | awk '{print $1}')
@@ -171,11 +162,7 @@ update_topic () {
 
     if [ ! -d "$specdir" ]; then
 	mkdir -p specs
-	if [ -n "$dobranch" ]; then
-	    (cd specs; osc bco "$obsproj/$name")
-	else
-	    (cd specs; osc co "$obsproj/$name")
-	fi
+	(cd specs; git clone -b $obsgitbranch "gitea@$srcoo:$obsgitproj/$name")
     fi
 
     # add changelog
@@ -193,7 +180,6 @@ update_topic () {
     fi
     if [ -f /tmp/COMMIT.$$ ]; then
 	(cd "$specdir"; osc vc -F /tmp/COMMIT.$$)
-	rm -f /tmp/COMMIT.$$
     fi
 
     # generate the new spec file
@@ -210,9 +196,9 @@ update_topic () {
     rm -f "$specdir"/kernel-firmware-tools*.tar.xz
     scripts/kft.py -C "$gitroot" archive-tools "$specdir/$kfttar"
 
-    (cd "$specdir"; osc addremove)
+    git -C "$specdir" add .
     if [ -z "$nocommit" ]; then
-	(cd "$specdir"; osc commit -m 'update')
+	git -C "$specdir" commit -F /tmp/COMMIT.$$
     fi
 }
 

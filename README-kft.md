@@ -90,10 +90,11 @@ tree at first. You can either clone / link into the subdirectory
 git_root=$HOME/somewhere/linux-git
 ```
 
-Also, the OBS project needs to be set up; either pass via `-p` option,
-or put in `.projconf` file like:
+When the Gitea org name is different from the default one
+(`kernel-firmware`), specify via `-P` option or put in `.projfconf`
+file like:
 ```
-obsproj=home:foobar:firmware
+obsgitproj=some-orgname
 ```
 
 For updating the kernel firmware package, simply run the script
@@ -114,34 +115,28 @@ If you have already updated linux-firmware.git tree, you can pass `-r`
 option to skip the git-pull and compare phase.
 
 The `update-firmware-git.sh` script will check the changes of
-linux-firmware git, and expands the stuff to the OBS project and
+linux-firmware git, and expands the stuff to the Gitea repo and
 package onto `specs/*` subdirectories. For example, after running the
-script, it'll have the OBS package directories under `specs/*`:
+script, it'll have the Gitea repo directories under `specs/*`:
 ```
 % ls specs
-home:foobar:firmware
-
-% ls specs/home:foobar:firmware
 kernel-firmware-amdgpu/     kernel-firmware-mellanox/
 kernel-firmware-ath10k/     kernel-firmware-mwifiex/
 ....
 ```
 
-If you want to branch the OBS project at updating, pass `-b` option to
-`update-firmware-git.sh`. Then `osc bco` will be performed instead of
-`osc co`.
-
 After preparing all materials, the script will commit the package to
-OBS automatically. For keeping without commit to OBS, pass `-n` option.
+OBS automatically. For keeping without commit to Gitea, pass `-n`
+option.
 
 Note that, when `specs/*` directories are present, the script will try
-to use those contents instead of the OBS project. Update the `specs/*`
+to use those contents instead of the Gitea repo. Update the `specs/*`
 appropriately beforehand, or remove all `specs/*` contents beforehand,
 so that the latest stuff gets downloaded at running the script.
 
 ### Inspection without updates
 
-For inspecting the changes without updating the OBS spec packages,
+For inspecting the changes without updating the Gitea repos,
 pass `-V` option to `update-firmware-git.sh`. It'll perform git-pull
 (unless `-r` option is given), compare the aliases and the updated git
 contents, then show what are changed and not.
