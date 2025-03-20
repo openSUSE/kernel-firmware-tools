@@ -198,6 +198,24 @@ update_topic () {
 
     git -C "$specdir" add .
     if [ -z "$nocommit" ]; then
+	rm -f /tmp/COMMIT.$$
+	if [ -n "$git_changed" ]; then
+	    echo "Update to version $specver (git commit $shorthead)" >> /tmp/COMMIT.$$
+	    echo >> /tmp/COMMIT.$$
+	    scripts/kft.py -C "$gitroot" gitlog $topic $commit $newhead >> /tmp/COMMIT.$$
+	fi
+	if [ -n "$alias_changed" ]; then
+	    if [ -n "$git_changed" ]; then
+		echo >> /tmp/COMMIT.$$
+	    fi
+	    echo "Aliases updated for $topic" >> /tmp/COMMIT.$$
+	fi
+	if [ -n "$commitmsg" ]; then
+	    if [ -n "$git_changed" -o -n "$alias_changed" ]; then
+		echo >> /tmp/COMMIT.$$
+	    fi
+	    echo "$commitmsg" >> /tmp/COMMIT.$$
+	fi
 	git -C "$specdir" commit -F /tmp/COMMIT.$$
     fi
 }

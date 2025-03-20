@@ -121,11 +121,10 @@ def lookup_hash(commit, topic):
         hashes[commit.oid] = h
     return h
 
-def print_changelog(repo, topic, start, end, file=None):
+def print_commits(repo, topic, start, end, file, prefix):
     """
     Print git logs for the specific topic between start and end GIT commits
     (ids or tags).
-    Only the subjects are printed, and formatted for RPM changelog style.
     """
 
     file = file or sys.stdout;
@@ -150,7 +149,26 @@ def print_changelog(repo, topic, start, end, file=None):
         # check whether any relevant change seen in this commit
         if lookup_hash(commit, topic) != lookup_hash(commit.parents[0], topic):
             t = commit.message.split('\n')[0]
-            print('  *', t, file=file)
+            if prefix:
+                print(prefix, t, file=file)
+            else:
+                print(t, file=file)
+
+def print_changelog(repo, topic, start, end, file=None):
+    """
+    Print git logs for the specific topic between start and end GIT commits
+    (ids or tags).
+    Only the subjects are printed, and formatted for RPM changelog style.
+    """
+    print_commits(repo, topic, start, end, file, '  *')
+
+def print_gitlog(repo, topic, start, end, file=None):
+    """
+    Print git logs for the specific topic between start and end GIT commits
+    (ids or tags).
+    Only the subjects are printed, and formatted for GIT commit log style.
+    """
+    print_commits(repo, topic, start, end, file, '*')
 
 def check_hash_changed(repo, topic, commit1, commit2):
     """Check two git commits"""
@@ -351,6 +369,9 @@ if __name__ == '__main__':
 * Print RPM changelog entry for the topic between two GIT commits:
   % %prog changelog $TOPIC $OLD_ID $NEW_ID
 
+* Print GIT commit log entry for the topic between two GIT commits:
+  % %prog gitlog $TOPIC $OLD_ID $NEW_ID
+
 * Print a version number in YYYYMMDD format of the given GIT commit:
   % %prog commit-version $GIT_ID
 
@@ -404,6 +425,11 @@ if __name__ == '__main__':
         if len(args) < 3:
             error()
         print_changelog(repo, args[0], args[1], args[2])
+
+    elif cmd == "gitlog":
+        if len(args) < 3:
+            error()
+        print_gitlog(repo, args[0], args[1], args[2])
 
     elif cmd == "commit-version":
         if len(args) < 1:
