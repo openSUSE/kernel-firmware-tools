@@ -30,8 +30,7 @@ Release:        0
 Group:          System/Kernel
 URL:            https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/
 Source0:        %{name}-%{version}.tar.xz
-# URL:          https://github.com/openSUSE/kernel-firmware-tools/
-Source1:        @@KFTTAR@@
+Source1:        https://github.com/openSUSE/kernel-firmware-tools/archives/refs/tags/@@KFTVER@@.tar.gz#/kernel-firmware-tools-@@KFTVER@@.tar.gz
 Source2:        %{name}-rpmlintrc
 Source3:        git_id
 @@EXTRASRCS@@
@@ -51,7 +50,8 @@ Conflicts:      filesystem < 84
 @@TOPICPROVS@@
 
 %prep
-%autosetup -a1 -p1
+%autosetup -p1
+tar xf %{S:1} --strip-components=1
 # strip down WHENCE for the topic
 scripts/strip-topic-whence.sh @@TOPIC@@ < WHENCE > WHENCE.new
 mv WHENCE.new WHENCE

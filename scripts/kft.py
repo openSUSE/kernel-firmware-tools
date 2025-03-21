@@ -228,23 +228,17 @@ def make_topic_archive(repo, topic, commit, dir='.'):
     p2 = subprocess.Popen(['xz'], stdin=p1.stdout, stdout=f)
     p2.communicate()
 
-def make_kf_tools(path):
-    """Create a kernel-firmware-tools tarball"""
+def make_kf_tools(dir):
+    """Create a kernel-firmware-tools tarball on the given directory"""
 
-    files_to_pack = [ 'README-kft.md', 'scripts', 'topicdefs', 'topics.list',
-                      'licenses.list', 'spdx.list', 'rpmlintrc',
-                      'kernel-firmware.spec.in' ]
+    tag = subprocess.check_output(['git', 'describe', '--tags', 'scripts']).decode('utf-8').rstrip()
 
-    if os.path.isdir('common'):
-        files_to_pack.append('common')
-
-    if os.path.exists('.git'):
-        f = open(path, 'wb')
-        p1 = subprocess.Popen(['git', 'archive', 'HEAD', '--'] + files_to_pack,
-                              stdout=subprocess.PIPE)
-        p2 = subprocess.Popen(['xz'], stdin=p1.stdout, stdout=f)
-    else:
-        os.system('tar cvfJ ' + path + ' ' + ' '.join(files_to_pack))
+    path = dir + '/kernel-firmware-tools-' + tag + '.tar.gz'
+    f = open(path, 'wb')
+    p1 = subprocess.Popen(['git', 'archive',
+                           '--prefix=kernel-firmware-tools-' + tag + '/',
+                           'scripts'], stdout=subprocess.PIPE)
+    p2 = subprocess.Popen(['gzip'], stdin=p1.stdout, stdout=f)
 
 def read_topic_aliases(topic):
     """Read aliases files for the given topic"""
@@ -445,7 +439,10 @@ if __name__ == '__main__':
         make_topic_archive(repo, args[0], args[1], dir)
 
     elif cmd == "archive-tools":
-        dir = 'kernel-firmware-tools.tar.xz'
+        if not os.path.exists('.git'):
+            print('ERROR: must be on kernel-firmware-tools GIT repo')
+            error()
+        dir = '.'
         if len(args) > 0:
             dir = args[0]
         make_kf_tools(dir)
