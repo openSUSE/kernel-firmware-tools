@@ -67,7 +67,7 @@ def read_licenses_list():
         licenses[key] = l
     read_list('licenses.list', process)
 
-def walk_whence(tree, topic, process):
+def walk_whence(tree, topic, process, process_link=None):
     """Walk over WHENCE file and process the files for the topic"""
     cur = None
     for t in tree['WHENCE'].data.decode('utf-8').split('\n'):
@@ -99,6 +99,9 @@ def walk_whence(tree, topic, process):
             t = re.sub(r'^File: *', '', t)
         elif re.match(r'RawFile:', t):
             t = re.sub(r'^RawFile: *', '', t)
+        elif re.match(r'Link:', t) and process_link:
+            process_link(t.encode('UTF-8'))
+            continue
         else:
             continue
         t = re.sub('"', '', t)
@@ -109,8 +112,10 @@ def compute_hash(commit, topic):
     tree = commit.tree
     def process(t):
         hash.update(tree[t].id.raw)
+    def process_link(t):
+        hash.update(t)
     hash = hashlib.sha1()
-    walk_whence(tree, topic, process)
+    walk_whence(tree, topic, process, process_link)
     return hash
 
 def lookup_hash(commit, topic):
