@@ -1,2 +1,0 @@
-Provides:       ralink-firmware = %{version}
-Obsoletes:      ralink-firmware < %{version}
