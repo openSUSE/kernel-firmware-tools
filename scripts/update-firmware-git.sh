@@ -48,6 +48,11 @@ done
 
 shift $(($OPTIND - 1))
 
+if [ ! -d .git ]; then
+    echo "ERROR: Must run on kernel-firwmare-tools GIT repo"
+    exit 1
+fi
+
 if [ ! -d "$gitroot" ]; then
     echo "ERROR: No git root specified for linux-firmware"
     usage
@@ -90,12 +95,7 @@ get_src () {
     curl -s "https://$srcoo/$obsgitproj/$1/raw/branch/$obsgitbranch/$2"
 }
 
-if [ -d .git ]; then
-    kftpfx=$(git describe --tags HEAD | tr - .)
-    kfttar=kernel-firmware-tools-$kftpfx.tar.xz
-else
-    kfttar=kernel-firmware-tools.tar.xz
-fi
+kftver=$(git describe --tags scripts | tr - .)
 
 update_topic () {
     local topic="$1"
@@ -183,7 +183,7 @@ update_topic () {
     fi
 
     # generate the new spec file
-    scripts/make-topic-spec.sh "$topic" "$specver" "$speccommit" "$specdir" "$kfttar"
+    scripts/make-topic-spec.sh "$topic" "$specver" "$speccommit" "$specdir" "$kftver"
 
     # create a new firmware tarball
     if [ -n "$git_changed" ]; then
@@ -192,9 +192,9 @@ update_topic () {
 	scripts/kft.py -C "$gitroot" archive "$topic" "$newhead" "$specdir"
     fi
 
-    # create kernel-firmware-tools.tar.xz
-    rm -f "$specdir"/kernel-firmware-tools*.tar.xz
-    scripts/kft.py -C "$gitroot" archive-tools "$specdir/$kfttar"
+    # create kernel-firmware-tools-*.tar.gz
+    rm -f "$specdir"/kernel-firmware-tools*.tar.*
+    scripts/kft.py -C "$gitroot" archive-tools "$specdir"
 
     git -C "$specdir" add .
     if [ -z "$nocommit" ]; then

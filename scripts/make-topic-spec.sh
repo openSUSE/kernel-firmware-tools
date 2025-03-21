@@ -1,7 +1,7 @@
 #!/bin/sh
 # SPDX-License-Identifier: GPL-2.0-or-later
 #
-# usage: make-topic-spec.sh TOPIC VERSION GIT_ID DIRECTORY [KFTTAR]
+# usage: make-topic-spec.sh TOPIC VERSION GIT_ID DIRECTORY KFTVER
 #   e.g. make-topic-spec.sh i915 20250131 1234acde... some/directory
 #
 # Generate a spec file for the given topic.
@@ -15,8 +15,7 @@ topic="$1"
 version="$2"
 git_id="$3"
 specdir="$4"
-kfttar="$5"
-test -z "$kfttar" && kfttar=kernel-firmware-tools.tar.xz
+kftver="$5"
 
 if [ ! -d "$specdir" ]; then
     echo "No valid topic directory given"
@@ -70,7 +69,7 @@ sed -e"s/@@PKGNAME@@/$pkgname/g" \
     -e"s/@@VERSION@@/$version/g" \
     -e"s/@@TOPIC@@/$topic/g" \
     -e"s/@@GIT_ID@@/$git_id/g" \
-    -e"s/@@KFTTAR@@/$kfttar/g" \
+    -e"s/@@KFTVER@@/$kftver/g" \
     kernel-firmware.spec.in | \
     while read line; do
     if [ "$line" = "@@SUMMARY@@" ]; then
