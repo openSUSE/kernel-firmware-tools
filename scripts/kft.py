@@ -298,6 +298,7 @@ def add_matching_aliases(ko, name):
                 continue
             if re.match(r'^acpi', f):
                 f = re.sub(r'([^:]*):([^:]*)$', r'\1%3A\2', f)
+            f = re.sub(r',', r'%2C', f)
             if aliases.get(name) == None:
                 aliases[name] = []
             if not f in aliases[name]:
