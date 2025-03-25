@@ -30,7 +30,7 @@ Release:        0
 Group:          System/Kernel
 URL:            https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/
 Source0:        %{name}-%{version}.tar.xz
-Source1:        https://github.com/openSUSE/kernel-firmware-tools/archives/refs/tags/@@KFTVER@@.tar.gz#/kernel-firmware-tools-@@KFTVER@@.tar.gz
+Source1:        https://github.com/openSUSE/kernel-firmware-tools/archive/refs/tags/@@KFTVER@@.tar.gz#/kernel-firmware-tools-@@KFTVER@@.tar.gz
 Source2:        %{name}-rpmlintrc
 Source3:        git_id
 @@EXTRASRCS@@
