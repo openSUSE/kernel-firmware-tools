@@ -76,6 +76,7 @@ ath3k:		LICENCE.atheros_firmware
 mga:
 r128:
 radeon:		LICENSE.radeon
+as21xxx:	LICENSE.aeonsemi
 en8811h:	LICENSE.airoha
 amdgpu:		LICENSE.amdgpu
 amdxdna:	LICENSE.amdnpu

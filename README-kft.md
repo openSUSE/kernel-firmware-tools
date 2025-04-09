@@ -12,10 +12,6 @@ linux-firmware git tree in a compressed format, per each flavor
 
 ## Files
 
-- `.projconf`:
-  An optional project configuration, read by
-  `update-firmware-git.sh`.
-
 - `topicdefs`:
   Definitions of each flavor (topic) and description;
   the description is filled into spec file
@@ -91,10 +87,17 @@ git_root=$HOME/somewhere/linux-git
 ```
 
 When the Gitea org name is different from the default one
-(`kernel-firmware`), specify via `-P` option or put in `.projfconf`
+(`kernel-firmware`), specify via `-P` option or put in `.projconf`
 file like:
 ```
 obsgitproj=some-orgname
+```
+
+When the OBS devel project name is different from the default one
+(`Kenrel:firmware`), specify via `-p` option or put in `.projconf`
+file like:
+```
+obsproj=some:develname
 ```
 
 For updating the kernel firmware package, simply run the script
@@ -124,6 +127,10 @@ kernel-firmware-amdgpu/     kernel-firmware-mellanox/
 kernel-firmware-ath10k/     kernel-firmware-mwifiex/
 ....
 ```
+If you want to fork / branch the Gitea repo and OBS project at updating,
+pass `-b` option to `update-firmware-git.sh`. Then `osc fork` will be
+performed beforehand to set up the forked Gitea repo and branched OBS
+project.
 
 After preparing all materials, the script will commit the package to
 OBS automatically. For keeping without commit to Gitea, pass `-n`

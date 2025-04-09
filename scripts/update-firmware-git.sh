@@ -7,11 +7,13 @@
 usage () {
     echo "usage: update-firmware-git.sh [-options] [TOPICS...]"
     echo "  -C DIR: git root directory"
-    echo "  -c GIT_ID: git ID to look at (HEAD as default)"
-    echo "  -P org: gitea repo org name"
+    echo "  -c GIT_ID: git ID to look at ('HEAD' as default)"
+    echo "  -P org: gitea repo org name ('kernel-firmware' as default)"
+    echo "  -p project: OBS devel project ('Kernel:firmware' as default)"
     echo "  -V: only verify the changes, not updating"
     echo "  -r: don't pull linux-firmware git tree"
     echo "  -n: don't commit for gitea repo"
+    echo "  -b: fork/branch packages at updating"
     echo "  -f: force to build even if unchanged"
     echo "  -m: additional changelog text"
     exit 1
@@ -20,23 +22,30 @@ usage () {
 gitroot=linux-firmware
 head=HEAD
 srcoo=src.opensuse.org
+obsproj=Kernel:firmware
 obsgitproj=kernel-firmware
 obsgitbranch=main
 
 test -f .projconf && . .projconf
 
-while getopts C:c:P:Vrnfm: opt; do
+while getopts C:c:P:p:Vrnbfm: opt; do
     case "$opt" in
 	C)
 	    gitroot="$OPTARG";;
 	c)
 	    head="$OPTARG";;
+	P)
+	    obsgitproj="$OPTARG";;
+	p)
+	    obsproj="$OPTARG";;
 	V)
 	    onlyverify=1;;
 	r)
 	    nopull=1;;
 	n)
 	    nocommit=1;;
+	b)
+	    dobranch=1;;
 	f)
 	    force=1;;
 	m)
@@ -56,6 +65,21 @@ fi
 if [ ! -d "$gitroot" ]; then
     echo "ERROR: No git root specified for linux-firmware"
     usage
+fi
+
+if [ -n "$dobranch" ]; then
+    if [ -z "$obsproj" ]; then
+	echo "ERROR: Missing OBS project name"
+	usage
+    fi
+
+    oscuser=$(osc user)
+    username=${oscuser%%:*}
+
+    if [ -z "$username" ]; then
+	echo "No OBS user available"
+	exit 1
+    fi
 fi
 
 if [ -n "$nopull" ]; then
@@ -162,7 +186,11 @@ update_topic () {
 
     if [ ! -d "$specdir" ]; then
 	mkdir -p specs
-	(cd specs; git clone -b $obsgitbranch "gitea@$srcoo:$obsgitproj/$name")
+	if [ -n "$dobranch" ]; then
+	    (cd specs; osc fork $obsproj $name; git clone -b $obsgitbranch "gitea@$srcoo:$username/$name")
+	else
+	    (cd specs; git clone -b $obsgitbranch "gitea@$srcoo:$obsgitproj/$name")
+	fi
     fi
 
     # add changelog

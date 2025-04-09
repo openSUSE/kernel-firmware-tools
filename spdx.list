@@ -76,6 +76,7 @@ ath3k:
 mga:		MIT
 r128:		MIT
 radeon:		MIT
+as21xxx:
 en8811h:
 amdgpu:
 amdxdna:
