@@ -7,8 +7,8 @@
 usage () {
     echo "usage: update-firmware-git.sh [-options] [TOPICS...]"
     echo "  -C DIR: git root directory"
-    echo "  -c GIT_ID: git ID to look at (HEAD as default)"
-    echo "  -P org: gitea repo org name"
+    echo "  -c GIT_ID: git ID to look at ('HEAD' as default)"
+    echo "  -P org: gitea repo org name ('kernel-firmware' as default)"
     echo "  -V: only verify the changes, not updating"
     echo "  -r: don't pull linux-firmware git tree"
     echo "  -n: don't commit for gitea repo"
