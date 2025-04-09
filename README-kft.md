@@ -12,10 +12,6 @@ linux-firmware git tree in a compressed format, per each flavor
 
 ## Files
 
-- `.projconf`:
-  An optional project configuration, read by
-  `update-firmware-git.sh`.
-
 - `topicdefs`:
   Definitions of each flavor (topic) and description;
   the description is filled into spec file
@@ -91,7 +87,7 @@ git_root=$HOME/somewhere/linux-git
 ```
 
 When the Gitea org name is different from the default one
-(`kernel-firmware`), specify via `-P` option or put in `.projfconf`
+(`kernel-firmware`), specify via `-P` option or put in `.projconf`
 file like:
 ```
 obsgitproj=some-orgname
