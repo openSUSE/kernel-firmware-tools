@@ -31,6 +31,8 @@ while getopts C:c:P:Vrnfm: opt; do
 	    gitroot="$OPTARG";;
 	c)
 	    head="$OPTARG";;
+	P)
+	    obsgitproj="$OPTARG";;
 	V)
 	    onlyverify=1;;
 	r)
