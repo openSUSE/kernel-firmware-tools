@@ -93,6 +93,13 @@ file like:
 obsgitproj=some-orgname
 ```
 
+When the OBS devel project name is different from the default one
+(`Kenrel:firmware`), specify via `-p` option or put in `.projconf`
+file like:
+```
+obsproj=some:develname
+```
+
 For updating the kernel firmware package, simply run the script
 `scripts/update-firmware-git.sh`.  Without argument, it runs git-pull
 of the given linux-firmware.git repository, and updates the stuff if
@@ -120,6 +127,10 @@ kernel-firmware-amdgpu/     kernel-firmware-mellanox/
 kernel-firmware-ath10k/     kernel-firmware-mwifiex/
 ....
 ```
+If you want to fork / branch the Gitea repo and OBS project at updating,
+pass `-b` option to `update-firmware-git.sh`. Then `osc fork` will be
+performed beforehand to set up the forked Gitea repo and branched OBS
+project.
 
 After preparing all materials, the script will commit the package to
 OBS automatically. For keeping without commit to Gitea, pass `-n`
