@@ -76,6 +76,7 @@ ath3k:		atheros
 mga:		platform
 r128:		platform
 radeon:		radeon		radeon amdgpu
+as21xxx:	network
 en8811h:	network
 amdgpu:		amdgpu
 amdxdna:	platform
