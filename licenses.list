@@ -220,3 +220,5 @@ qaic:		LICENSE.qcom qcom/NOTICE.txt
 ish:		LICENSE.intel
 qdu100:		LICENSE.qcom qcom/NOTICE.txt
 intel_vpu:	LICENSE.intel_vpu
+bmi260:		LICENSE.bmi260
+qcs9100:	LICENSE.qcom qcom/NOTICE.txt
