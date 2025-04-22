@@ -229,4 +229,6 @@ qaic:		qcom
 ish:		intel		intel-ish-ipc
 qdu100:		qcom
 intel_vpu:	intel
+bmi260:		platform	bmi270_i2c bmi270_spi
+qcs9100:	qcom
 ast:		platform
