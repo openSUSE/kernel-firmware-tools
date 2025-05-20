@@ -166,6 +166,7 @@ hfi1:		LICENSE.hfi1_firmware
 knav_qmss_queue: LICENCE.ti-keystone
 mwlwifi:	LICENCE.Marvell
 mtk-vpu:	LICENCE.mediatek
+mt8196:		LICENCE.mediatek
 mtk_scp:	LICENCE.mediatek
 btmtk:		LICENCE.mediatek
 rk3399-dptx:	LICENCE.rockchip
@@ -197,6 +198,7 @@ prestera:	LICENCE.Marvell
 lt9611uxc:	LICENSE.Lontium
 wfx:		wfx/LICENCE.wf200
 wave5:		LICENCE.cnm
+wave6:		LICENCE.cnm
 rvu_cptpf:	LICENCE.Marvell
 amphion:	LICENSE.amphion_vpu
 cs35l41:	LICENSE.cirrus
@@ -221,4 +223,4 @@ ish:		LICENSE.intel
 qdu100:		LICENSE.qcom qcom/NOTICE.txt
 intel_vpu:	LICENSE.intel_vpu
 bmi260:		LICENSE.bmi260
-qcs9100:	LICENSE.qcom qcom/NOTICE.txt
+qcom-geni-se:	LICENSE.qcom qcom/NOTICE.txt
