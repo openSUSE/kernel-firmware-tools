@@ -40,6 +40,7 @@ iwlwifi:	LICENCE.iwlwifi_firmware
 atomisp:	LICENSE.ivsc
 ipu3-imgu:	LICENSE.ipu3_firmware
 intel-ipu6-isys: LICENSE.ivsc
+intel-ipu7-isys: LICENSE.intel
 mei-vsc-hw:	LICENSE.ivsc
 cx231xx:
 ixp4xx-npe:	LICENSE.ixp4xx
