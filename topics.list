@@ -40,6 +40,7 @@ iwlwifi:	iwlwifi		iwlwifi iwl4965 iwl3945
 atomisp:	intel
 ipu3-imgu:	intel
 intel-ipu6-isys: intel
+intel-ipu7-isys: intel
 mei-vsc-hw:	intel
 cx231xx:	media		cx25840
 ixp4xx-npe:	platform
