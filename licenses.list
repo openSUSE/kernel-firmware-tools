@@ -3,18 +3,18 @@ BCM-0bb4-0306:	LICENCE.cypress
 snd-korg1212:
 snd-maestro3:
 snd-ymfpci:
-advansys:
+advansys:	LICENCE.advansys
 qla1280:	LICENCE.qla1280
 kaweth:		LICENCE.kaweth
 dvb-ttusb-budget:
-keyspan:	GPL-2 GPL-3
+keyspan:	LICENCE.keyspan
 keyspan_pda:	GPL-2 GPL-3
-emi26:
+emi26:		LICENCE.emi26
 emi62:
 ti_usb_3410_5052:
 whiteheat:
 cpia2:
-dabusb:
+dabusb:		LICENCE.dabusb
 vicam:
 io_edgeport:
 io_ti:
@@ -25,13 +25,13 @@ orinoco:	LICENCE.agere
 ar9170:		LICENCE.atheros_firmware
 ath9k_htc:	LICENCE.atheros_firmware LICENCE.open-ath9k-htc-firmware
 cassini:
-slicoss:
-sxg:
-cxgb3:
+slicoss:	LICENCE.alacritech
+sxg:		LICENCE.alacritech
+cxgb3:		LICENCE.cxgb3
 cxgb4:		LICENCE.chelsio_firmware
 e100:		LICENCE.e100
 acenic:
-tg3:
+tg3:		LICENCE.tigon
 starfire:
 libertas:	LICENCE.Marvell LICENCE.OLPC
 mwl8k:		LICENCE.Marvell
@@ -45,7 +45,7 @@ mei-vsc-hw:	LICENSE.ivsc
 cx231xx:
 ixp4xx-npe:	LICENSE.ixp4xx
 tehuti:
-typhoon:
+typhoon:	LICENCE.typhoon
 yam:
 pcnet_cs:
 3c589_cs:
@@ -57,7 +57,7 @@ cx23885:
 cx23840:
 qlogicpti:
 myri_sbus:
-bnx2x:
+bnx2x:		LICENCE.bnx2
 bnx2:
 netxen_nic:	LICENCE.phanfw
 dvb-ttpci:	GPL-2 GPL-3
@@ -75,8 +75,8 @@ xc5000:		LICENCE.xc5000 LICENCE.xc5000c
 dib0700:	LICENSE.dib0700
 ath3k:		LICENCE.atheros_firmware
 mga:
-r128:
-radeon:		LICENSE.radeon
+r128:		MIT
+radeon:		LICENSE.radeon MIT
 as21xxx:	LICENSE.aeonsemi
 en8811h:	LICENSE.airoha
 amdgpu:		LICENSE.amdgpu
@@ -140,7 +140,7 @@ ccp:		LICENSE.amd-sev
 microcode_amd:	LICENSE.amd-ucode amd-ucode/README
 mxu11x0:	LICENCE.moxa
 mxuport:	LICENCE.moxa
-cw1200:		LICENCE.cw1200
+cw1200:		LICENCE.cw1200 LICENCE.cw1200-sdd
 BFA/BNA:
 qat:		LICENCE.qat_firmware
 rsi:
