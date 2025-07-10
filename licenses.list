@@ -225,3 +225,4 @@ qdu100:		LICENSE.qcom qcom/NOTICE.txt
 intel_vpu:	LICENSE.intel_vpu
 bmi260:		LICENSE.bmi260
 qcom-geni-se:	LICENSE.qcom qcom/NOTICE.txt
+sdx61:		LICENSE.qcom qcom/NOTICE.txt
