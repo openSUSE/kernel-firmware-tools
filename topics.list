@@ -234,4 +234,5 @@ qdu100:		qcom
 intel_vpu:	intel
 bmi260:		platform	bmi270_i2c bmi270_spi
 qcom-geni-se:	qcom
+sdx61:		qcom
 ast:		platform
