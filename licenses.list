@@ -17,7 +17,7 @@ cpia2:
 dabusb:		LICENCE.dabusb
 vicam:
 io_edgeport:
-io_ti:
+io_ti:		GPL-2
 dsp56k:		GPL-2 GPL-3
 snd-sb16-csp:
 qla2xxx:	LICENCE.qla2xxx
@@ -44,7 +44,7 @@ intel-ipu7-isys: LICENSE.intel
 mei-vsc-hw:	LICENSE.ivsc
 cx231xx:
 ixp4xx-npe:	LICENSE.ixp4xx
-tehuti:
+tehuti:		LICENSE.tehuti
 typhoon:	LICENCE.typhoon
 yam:
 pcnet_cs:
@@ -52,9 +52,9 @@ pcnet_cs:
 3c574_cs:
 serial_cs:	GPL-3
 smc91c92_cs:
-cx23418:
-cx23885:
-cx23840:
+cx23418:	LICENSE.conexant
+cx23885:	LICENSE.conexant
+cx23840:	LICENSE.conexant
 qlogicpti:
 myri_sbus:
 bnx2x:		LICENCE.bnx2
@@ -74,7 +74,7 @@ xc4000:		LICENCE.xc4000
 xc5000:		LICENCE.xc5000 LICENCE.xc5000c
 dib0700:	LICENSE.dib0700
 ath3k:		LICENCE.atheros_firmware
-mga:
+mga:		LICENSE.mga
 r128:		MIT
 radeon:		LICENSE.radeon MIT
 as21xxx:	LICENSE.aeonsemi
@@ -85,10 +85,10 @@ amd_pmf:	LICENSE.amd_pmf
 s2255drv:
 rtl8192e:
 lgs8gxx:
-ib_qib:
-qed:
+ib_qib:		LICENSE.ib_qib
+qed:		LICENSE.qed
 ueagle-atm:	LICENCE.ueagle-atm4-firmware
-vxge:
+vxge:		LICENSE.vxge
 brcmsmac:	LICENCE.broadcom_bcm43xx
 brcmfmac:	LICENCE.broadcom_bcm43xx LICENCE.cypress GPL-2
 wl1251:		LICENCE.wl1251
@@ -115,8 +115,8 @@ rtw88:		LICENCE.rtlwifi_firmware.txt rtw88/README
 rtl8192ee:	LICENCE.rtlwifi_firmware.txt
 rtl8723bs:	LICENCE.rtlwifi_firmware.txt
 rtl8xxxu:	LICENCE.rtlwifi_firmware.txt
-r8169:
-rt1320:
+r8169:		LICENSE.r8169
+rt1320:		LICENSE.rt1320
 vt6656:		LICENCE.via_vt6656
 DFU:		LICENCE.atheros_firmware LICENSE.QualcommAtheros_ar3k
 Atheros:	LICENCE.atheros_firmware
@@ -125,25 +125,25 @@ ath10k:		ath10k/QCA988X/hw2.0/notice_ath10k_firmware-4.txt ath10k/QCA988X/hw2.0/
 ath11k:		ath11k/IPQ6018/hw1.0/Notice.txt LICENSE.QualcommAtheros_ath10k
 ath12k:		ath12k/WCN7850/hw2.0/Notice.txt LICENSE.QualcommAtheros_ath10k
 myri10ge:	LICENCE.myri10ge_firmware
-drxk:
+drxk:		LICENSE.drxk
 ene-ub6250:	LICENCE.ene_firmware
 isci:		GPL-2
 ar5523:		LICENCE.atheros_firmware
-s5p-mfc:
+s5p-mfc:	LICENSE.s5p-mfc
 carl9170:	GPL-2
 snd-hda-codec-ca0132: LICENCE.ca0132
 btusb:		LICENCE.ibt_firmware LICENCE.rtlwifi_firmware.txt
 btmtk_usb:	LICENCE.ralink_a_mediatek_company_firmware
-rp2:
-go7007:		LICENCE.go7007
+rp2:		LICENSE.rp2
+go7007:		LLICENCE.go7007-s2250 ICENCE.go7007
 ccp:		LICENSE.amd-sev
 microcode_amd:	LICENSE.amd-ucode amd-ucode/README
 mxu11x0:	LICENCE.moxa
 mxuport:	LICENCE.moxa
 cw1200:		LICENCE.cw1200 LICENCE.cw1200-sdd
-BFA/BNA:
+BFA/BNA:	LICENSE.bfa
 qat:		LICENCE.qat_firmware
-rsi:
+rsi:		LICENSE.rsi
 xhci-rcar:	LICENCE.r8a779x_usb3
 snd_soc_sst_acpi: LICENCE.IntcSST2
 as102:		LICENCE.Abilis
@@ -190,11 +190,13 @@ imx-sdma:	LICENSE.sdma_firmware
 adreno:		LICENSE.qcom qcom/NOTICE.txt
 qcom_q6v5_pas:	LICENSE.qcom-2 qcom/NOTICE.txt
 qcom_q6v5_mss:	LICENSE.qcom qcom/NOTICE.txt
-mlxsw_spectrum:
+mlxsw_spectrum:	LICENSE.mellanox
 cdns-mhdp:	LICENCE.cadence
 fsl-mc:		LICENSE.nxp_mc_firmware
 mscc-phy:	LICENCE.microchip
 meson-vdec:	LICENSE.amlogic_vdec
+ice:		LICENSE.ice LICENSE.ice_enhanced
+inside-secure:	LICENCE.inside-secure
 prestera:	LICENCE.Marvell
 lt9611uxc:	LICENSE.Lontium
 wfx:		wfx/LICENCE.wf200
