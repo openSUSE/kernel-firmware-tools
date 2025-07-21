@@ -213,6 +213,7 @@ btnxpuart:	LICENSE.nxp
 qcom-sc8280xp:	LICENCE.linaro
 amlogic:	LICENSE.amlogic
 powervr:	LICENSE.powervr
+qcom-qcs6490:	LICENCE.linaro
 qcom-sm8550:	LICENCE.linaro
 qcom-sm8650:	LICENCE.linaro
 qcom-x1e80100:	LICENCE.linaro
