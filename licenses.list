@@ -79,6 +79,7 @@ r128:		MIT
 radeon:		LICENSE.radeon MIT
 as21xxx:	LICENSE.aeonsemi
 en8811h:	LICENSE.airoha
+airoha-npu:	LICENSE.airoha
 amdgpu:		LICENSE.amdgpu
 amdxdna:	LICENSE.amdnpu
 amd_pmf:	LICENSE.amd_pmf
