@@ -222,6 +222,8 @@ qcom-sc8280xp:	sound		snd-soc-sc8280xp
 amlogic:	bluetooth
 powervr:	platform
 qcom-qcs6490:	sound		snd-soc-sc8280xp
+qcom-qcs8300:	sound		snd-soc-sc8280xp
+qcom-qcs9100:	sound		snd-soc-sc8280xp
 qcom-sm8550:	sound		snd-soc-sc8280xp
 qcom-sm8650:	sound		snd-soc-sc8280xp
 qcom-x1e80100:	sound
