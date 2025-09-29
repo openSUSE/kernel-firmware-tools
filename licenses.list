@@ -226,7 +226,7 @@ Mont-TSSE:	LICENSE.montage
 panthor:	LICENCE.mali_csffw
 isp:		LICENSE.amdisp
 qaic:		LICENSE.qcom qcom/NOTICE.txt
-ish:		LICENSE.intel LICENCE.lenovo
+ish:		LICENSE.intel LICENCE.lenovo LICENCE.HP
 qdu100:		LICENSE.qcom qcom/NOTICE.txt
 intel_vpu:	LICENSE.intel_vpu
 bmi260:		LICENSE.bmi260
