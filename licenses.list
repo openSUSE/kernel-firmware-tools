@@ -11,7 +11,7 @@ keyspan:	LICENCE.keyspan
 keyspan_pda:	GPL-2 GPL-3
 emi26:		LICENCE.emi26
 emi62:
-ti_usb_3410_5052:
+ti_usb_3410_5052: LICENCE.multitech
 whiteheat:
 cpia2:
 dabusb:		LICENCE.dabusb
@@ -83,12 +83,12 @@ airoha-npu:	LICENSE.airoha
 amdgpu:		LICENSE.amdgpu
 amdxdna:	LICENSE.amdnpu
 amd_pmf:	LICENSE.amd_pmf
-s2255drv:
+s2255drv:	LICENCE.sensoray
 rtl8192e:
 lgs8gxx:
 ib_qib:		LICENSE.ib_qib
 qed:		LICENSE.qed
-ueagle-atm:	LICENCE.ueagle-atm4-firmware
+ueagle-atm:	LICENCE.ueagle-atm4-firmware LICENCE.ueagle
 vxge:		LICENSE.vxge
 brcmsmac:	LICENCE.broadcom_bcm43xx
 brcmfmac:	LICENCE.broadcom_bcm43xx LICENCE.cypress GPL-2
@@ -136,7 +136,7 @@ snd-hda-codec-ca0132: LICENCE.ca0132
 btusb:		LICENCE.ibt_firmware LICENCE.rtlwifi_firmware.txt
 btmtk_usb:	LICENCE.ralink_a_mediatek_company_firmware
 rp2:		LICENSE.rp2
-go7007:		LLICENCE.go7007-s2250 ICENCE.go7007
+go7007:		LLICENCE.sensoray ICENCE.go7007
 ccp:		LICENSE.amd-sev
 microcode_amd:	LICENSE.amd-ucode amd-ucode/README
 mxu11x0:	LICENCE.moxa
@@ -226,7 +226,7 @@ Mont-TSSE:	LICENSE.montage
 panthor:	LICENCE.mali_csffw
 isp:		LICENSE.amdisp
 qaic:		LICENSE.qcom qcom/NOTICE.txt
-ish:		LICENSE.intel LICENCE.lenovo LICENCE.HP
+ish:		LICENSE.intel LICENCE.lenovo LICENCE.HP LICENSE.dell
 qdu100:		LICENSE.qcom qcom/NOTICE.txt
 intel_vpu:	LICENSE.intel_vpu
 bmi260:		LICENSE.bmi260
