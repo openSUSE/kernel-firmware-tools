@@ -120,10 +120,10 @@ def compute_hash(commit, topic):
 
 def lookup_hash(commit, topic):
     """Look up the hash for the given commit and topic with caching"""
-    h = hashes.get(commit.oid)
+    h = hashes.get(commit.id)
     if h == None:
         h = compute_hash(commit, topic).digest()
-        hashes[commit.oid] = h
+        hashes[commit.id] = h
     return h
 
 def print_commits(repo, topic, start, end, file, prefix):
@@ -140,7 +140,7 @@ def print_commits(repo, topic, start, end, file, prefix):
     if lookup_hash(end, topic) == lookup_hash(start, topic):
         return
 
-    for commit in repo.walk(end.oid,
+    for commit in repo.walk(end.id,
                             pygit2.enums.SortMode.TOPOLOGICAL):
 
         # reached to the end?
