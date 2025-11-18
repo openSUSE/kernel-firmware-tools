@@ -208,6 +208,7 @@ amphion:	LICENSE.amphion_vpu
 cs35l41:	LICENSE.cirrus
 cs35l56:	LICENSE.cirrus
 cs42l43:	LICENSE.cirrus
+cs42l45:	LICENSE.cirrus
 mtk-sof:	LICENCE.mediatek
 nxp-sr1xx:	LICENSE.nxp
 btnxpuart:	LICENSE.nxp
@@ -232,3 +233,4 @@ intel_vpu:	LICENSE.intel_vpu
 bmi260:		LICENSE.bmi260
 qcom-geni-se:	LICENSE.qcom qcom/NOTICE.txt
 sdx61:		LICENSE.qcom qcom/NOTICE.txt
+sdx35:		LICENSE.qcom qcom/NOTICE.txt
