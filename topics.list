@@ -241,4 +241,5 @@ bmi260:		platform	bmi270_i2c bmi270_spi
 qcom-geni-se:	qcom
 sdx61:		qcom
 sdx35:		qcom
+pcie-rcar-gen4:	platform
 ast:		platform
