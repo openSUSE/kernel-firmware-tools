@@ -79,6 +79,7 @@ r128:		platform
 radeon:		radeon		radeon amdgpu
 as21xxx:	network
 en8811h:	network
+an8811hb:	network
 airoha-npu:	network		airoha_npu
 amdgpu:		amdgpu
 amdxdna:	platform
@@ -111,10 +112,10 @@ rtl8723de:	realtek
 r8723au:	realtek
 rtl8188ee:	realtek
 rtl8188eu:	realtek		rtl8188eu r8188eu
-rtl8821ae:	realtek
-rtl8822be:	realtek		rtl8822be r8822be
-rtw88:		realtek		rtw88_pci
-rtw89:		realtek		rtw89_pci
+rtl8821ae:	realtek         rtw88_8821c rtw88_8821ce rtw88_8821cs rtw88_8821cu rtw88_8821a rtw88_8812a rtw88_8821au rtw88_8812au rtw88_8814a rtw88_8814ae rtw88_8814au
+rtl8822be:	realtek		rtl8822be r8822be rtw88_8822be rtw88_8822b rtw88_8822bs rtw88_8822bu rtw88_8822c rtw88_8822ce rtw88_8822cs rtw88_8822cu
+rtw88:		realtek		rtw88_pci rtw88_sdio rtw88_usrtw88_8723x rtw88_8703b rtw88_8723cs rtw88_8723d rtw88_8723de rtw88_8723ds rtw88_8723du rtw88_88xxa
+rtw89:		realtek		rtw89_pci rtw89_usb rtw89_8851b rtw89_8851be rtw89_8851bu rtw89_8852a rtw89_8852ae rtw89_8852au rtw89_8852b rtw89_8852be rtw89_8852bu rtw89_8852bt rtw89_8852bte rtw89_8852c rtw89_8852ce rtw89_8852cu rtw89_8922a rtw89_8922a
 rtl8192ee:	realtek
 rtl8723bs:	realtek
 rtl8xxxu:	realtek
