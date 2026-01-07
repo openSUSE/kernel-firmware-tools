@@ -79,6 +79,7 @@ r128:		platform
 radeon:		radeon		radeon amdgpu
 as21xxx:	network
 en8811h:	network
+an8811hb:	network
 airoha-npu:	network		airoha_npu
 amdgpu:		amdgpu
 amdxdna:	platform
