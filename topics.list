@@ -243,4 +243,8 @@ qcom-geni-se:	qcom
 sdx61:		qcom
 sdx35:		qcom
 pcie-rcar-gen4:	platform
+qcm6490:	sound
+qcs615:		sound
+sm8450:		sound
+sm8750:		sound
 ast:		platform
