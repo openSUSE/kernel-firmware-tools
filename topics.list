@@ -80,7 +80,8 @@ radeon:		radeon		radeon amdgpu
 as21xxx:	network
 en8811h:	network
 an8811hb:	network
-airoha-npu:	network		airoha_npu
+airoha-npu-7581:	network		airoha_npu
+airoha-npu-7583:	network		airoha_npu
 amdgpu:		amdgpu
 amdxdna:	platform
 amd_pmf:	platform
