@@ -81,6 +81,7 @@ as21xxx:	network
 en8811h:	network
 an8811hb:	network
 airoha-npu-7581:	network		airoha_npu
+airoha-npu-7581-mt7996:	network		airoha_npu
 airoha-npu-7583:	network		airoha_npu
 amdgpu:		amdgpu
 amdxdna:	platform
