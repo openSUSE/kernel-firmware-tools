@@ -81,6 +81,7 @@ as21xxx:	LICENSE.aeonsemi
 en8811h:	LICENSE.airoha
 an8811hb:	LICENSE.airoha
 airoha-npu-7581:	LICENSE.airoha
+airoha-npu-7581-mt7996:	LICENSE.airoha
 airoha-npu-7583:	LICENSE.airoha
 amdgpu:		LICENSE.amdgpu
 amdxdna:	LICENSE.amdnpu
