@@ -232,6 +232,7 @@ qcom-sm8550:	sound		snd-soc-sc8280xp
 qcom-sm8650:	sound		snd-soc-sc8280xp
 qcom-x1e80100:	sound
 ti-tas2781:	sound		snd-hda-scodec-tas2781-i2c
+ti-tas2783:	sound		snd-hda-scodec-tas2781-i2c
 ti-tas2563:	sound		snd-hda-scodec-tas2781-i2c
 Mont-TSSE:	platform
 panthor:	platform
