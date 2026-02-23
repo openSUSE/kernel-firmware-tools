@@ -179,6 +179,7 @@ mt76x0:		LICENCE.mediatek
 mt76x2e:	LICENCE.ralink_a_mediatek_company_firmware
 mt76x2u:	LICENCE.mediatek
 mt7615e:	LICENCE.mediatek
+mt7902:		LICENCE.mediatek
 mt7920:		LICENCE.mediatek
 mt7921:		LICENCE.mediatek
 mt7922:		LICENCE.mediatek
