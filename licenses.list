@@ -203,6 +203,7 @@ meson-vdec:	LICENSE.amlogic_vdec
 ice:		LICENSE.ice LICENSE.ice_enhanced
 inside-secure:	LICENCE.inside-secure
 prestera:	LICENCE.Marvell
+lt8713sx:	LICENSE.Lontium
 lt9611uxc:	LICENSE.Lontium
 wfx:		wfx/LICENCE.wf200
 wave5:		LICENCE.cnm
