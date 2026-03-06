@@ -111,7 +111,8 @@ def compute_hash(commit, topic):
     """Compute a hash for the given topic at the given GIT commit"""
     tree = commit.tree
     def process(t):
-        hash.update(tree[t].id.raw)
+        if t in tree:
+            hash.update(tree[t].id.raw)
     def process_link(t):
         hash.update(t)
     hash = hashlib.sha1()
