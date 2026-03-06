@@ -210,6 +210,7 @@ inside-secure:	platform	crypto_safexcel
 qcom_q6v5_pas:	qcom
 qcom_q6v5_mss:	qcom
 prestera:	prestera
+lt8713sx:	platform
 lt9611uxc:	platform	lontium-lt9611uxc
 wfx:		platform
 wave5:		platform
@@ -226,6 +227,7 @@ btnxpuart:	platform
 qcom-sc8280xp:	sound		snd-soc-sc8280xp
 amlogic:	bluetooth
 powervr:	platform
+qcom-kaanapali:	sound
 qcom-qcs6490:	sound		snd-soc-sc8280xp
 qcom-qcs8300:	sound		snd-soc-sc8280xp
 qcom-qcs9100:	sound		snd-soc-sc8280xp

@@ -203,6 +203,7 @@ meson-vdec:	LICENSE.amlogic_vdec
 ice:		LICENSE.ice LICENSE.ice_enhanced
 inside-secure:	LICENCE.inside-secure
 prestera:	LICENCE.Marvell
+lt8713sx:	LICENSE.Lontium
 lt9611uxc:	LICENSE.Lontium
 wfx:		wfx/LICENCE.wf200
 wave5:		LICENCE.cnm
@@ -219,6 +220,7 @@ btnxpuart:	LICENSE.nxp
 qcom-sc8280xp:	LICENCE.linaro
 amlogic:	LICENSE.amlogic
 powervr:	LICENSE.powervr
+qcom-kaanapali:	LICENCE.linaro
 qcom-qcs6490:	LICENCE.linaro
 qcom-qcs8300:	LICENCE.linaro
 qcom-qcs9100:	LICENCE.linaro
