@@ -224,16 +224,8 @@ cs42l45:	sound
 mtk-sof:	sound		snd-sof-mt8186 snd-sof-mt8195
 nxp-sr1xx:	platform
 btnxpuart:	platform
-qcom-sc8280xp:	sound		snd-soc-sc8280xp
 amlogic:	bluetooth
 powervr:	platform
-qcom-kaanapali:	sound
-qcom-qcs6490:	sound		snd-soc-sc8280xp
-qcom-qcs8300:	sound		snd-soc-sc8280xp
-qcom-qcs9100:	sound		snd-soc-sc8280xp
-qcom-sm8550:	sound		snd-soc-sc8280xp
-qcom-sm8650:	sound		snd-soc-sc8280xp
-qcom-x1e80100:	sound
 ti-tas2781:	sound		snd-hda-scodec-tas2781-i2c
 ti-tas2783:	sound		snd-hda-scodec-tas2781-i2c
 ti-tas2563:	sound		snd-hda-scodec-tas2781-i2c
@@ -249,8 +241,5 @@ qcom-geni-se:	qcom
 sdx61:		qcom
 sdx35:		qcom
 pcie-rcar-gen4:	platform
-qcm6490:	sound
-qcs615:		sound
-sm8450:		sound
-sm8750:		sound
+Qualcomm:	sound		snd-soc-sc8280xp snd-soc-sm8250 snd-soc-x1e80100
 ast:		platform
