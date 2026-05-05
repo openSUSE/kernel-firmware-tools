@@ -210,6 +210,7 @@ inside-secure:	platform	crypto_safexcel
 qcom_q6v5_pas:	qcom
 qcom_q6v5_mss:	qcom
 prestera:	prestera
+lt7911exc:	platform
 lt8713sx:	platform
 lt9611uxc:	platform	lontium-lt9611uxc
 wfx:		platform
