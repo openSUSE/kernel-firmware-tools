@@ -205,6 +205,7 @@ inside-secure:	LICENCE.inside-secure
 prestera:	LICENCE.Marvell
 lt7911exc:	LICENSE.Lontium
 lt8713sx:	LICENSE.Lontium
+lt9611c:	LICENSE.Lontium
 lt9611uxc:	LICENSE.Lontium
 wfx:		wfx/LICENCE.wf200
 wave5:		LICENCE.cnm
