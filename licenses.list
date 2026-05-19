@@ -236,4 +236,5 @@ qcom-geni-se:	LICENSE.qcom qcom/NOTICE.txt
 sdx61:		LICENSE.qcom qcom/NOTICE.txt
 sdx35:		LICENSE.qcom qcom/NOTICE.txt
 pcie-rcar-gen4:	LICENCE.r8a779g_pcie_phy
+PCM6240:	LICENCE.ti-tspa
 Qualcomm:	LICENCE.linaro
