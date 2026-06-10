@@ -1,21 +1,15 @@
 # DRIVER:	TOPIC		MODULES...
 BCM-0bb4-0306:	brcm		btbcm
-snd-korg1212:	sound
-snd-maestro3:	sound
-snd-ymfpci:	sound
 advansys:	platform
 qla1280:	qlogic
 kaweth:		usb-network
-dvb-ttusb-budget: media
 keyspan:	serial
 keyspan_pda:	serial
 emi26:		sound
-emi62:		sound
 ti_usb_3410_5052: serial
 whiteheat:	serial
 cpia2:		media
 dabusb:		media
-vicam:		media		gspca_vicam vicam
 io_edgeport:	serial
 io_ti:		serial
 dsp56k:		platform
@@ -24,13 +18,11 @@ qla2xxx:	qlogic
 orinoco:	network
 ar9170:		atheros
 ath9k_htc:	atheros
-cassini:	platform
 slicoss:	network
 sxg:		network
 cxgb3:		chelsio
 cxgb4:		chelsio		cxgb4 csiostor
 e100:		network
-acenic:		network
 tg3:		network
 starfire:	network
 libertas:	marvell		libertas_tf_usb libertas_sdio libertas_cs usb8xxx btmrvl_sdio
@@ -46,7 +38,6 @@ cx231xx:	media		cx25840
 ixp4xx-npe:	platform
 tehuti:		network
 typhoon:	network
-yam:		platform
 pcnet_cs:	platform	pcnet_cs serial_cs
 3c589_cs:	platform	serial_cs
 3c574_cs:	platform	serial_cs
@@ -55,8 +46,6 @@ smc91c92_cs:	platform
 cx23418:	media		cx18
 cx23885:	media 		cx25840
 cx23840:	media		cx25840
-qlogicpti:	qlogic
-myri_sbus:	network
 bnx2x:		bnx2
 bnx2:		bnx2
 netxen_nic:	network		netxen_nic qlcnic
@@ -88,7 +77,6 @@ amdxdna:	platform
 amd_pmf:	platform
 s2255drv:	platform
 rtl8192e:	realtek		r8192e_pci
-lgs8gxx:	media
 ib_qib:		qlogic
 qed:		qlogic		qede qedf qedi
 ueagle-atm:	ueagle

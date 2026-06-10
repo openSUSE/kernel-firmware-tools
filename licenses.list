@@ -1,36 +1,28 @@
 # DRIVER:	LICENSES
 BCM-0bb4-0306:	LICENCE.cypress
-snd-korg1212:
-snd-maestro3:
-snd-ymfpci:
 advansys:	LICENCE.advansys
 qla1280:	LICENCE.qla1280
 kaweth:		LICENCE.kaweth
-dvb-ttusb-budget:
 keyspan:	LICENCE.keyspan
-keyspan_pda:	GPL-2 GPL-3
+keyspan_pda:	GPL-2.0 GPL-3.0-only
 emi26:		LICENCE.emi26
-emi62:
 ti_usb_3410_5052: LICENCE.multitech
 whiteheat:
 cpia2:
 dabusb:		LICENCE.dabusb
-vicam:
 io_edgeport:
-io_ti:		GPL-2
-dsp56k:		GPL-2 GPL-3
+io_ti:		GPL-2.0
+dsp56k:		GPL-2.0 GPL-3
 snd-sb16-csp:
 qla2xxx:	LICENCE.qla2xxx
 orinoco:	LICENCE.agere
 ar9170:		LICENCE.atheros_firmware
 ath9k_htc:	LICENCE.atheros_firmware LICENCE.open-ath9k-htc-firmware
-cassini:
 slicoss:	LICENCE.alacritech
 sxg:		LICENCE.alacritech
 cxgb3:		LICENCE.cxgb3
 cxgb4:		LICENCE.chelsio_firmware
 e100:		LICENCE.e100
-acenic:
 tg3:		LICENCE.tigon
 starfire:
 libertas:	LICENCE.Marvell LICENCE.OLPC
@@ -46,21 +38,18 @@ cx231xx:
 ixp4xx-npe:	LICENSE.ixp4xx
 tehuti:		LICENSE.tehuti
 typhoon:	LICENCE.typhoon
-yam:
 pcnet_cs:
 3c589_cs:
 3c574_cs:
-serial_cs:	GPL-3
+serial_cs:	GPL-3.0-only
 smc91c92_cs:
 cx23418:	LICENSE.conexant
 cx23885:	LICENSE.conexant
 cx23840:	LICENSE.conexant
-qlogicpti:
-myri_sbus:
 bnx2x:		LICENCE.bnx2
 bnx2:
 netxen_nic:	LICENCE.phanfw
-dvb-ttpci:	GPL-2 GPL-3
+dvb-ttpci:	GPL-2.0 GPL-3.0-only
 snd-wavefront:
 rt61pci:	LICENCE.ralink-firmware.txt
 rt73usb:	LICENCE.ralink-firmware.txt
@@ -69,7 +58,7 @@ rt2800pci:	LICENCE.ralink-firmware.txt
 rt2860sta:	LICENCE.ralink-firmware.txt
 rt2800usb:	LICENCE.ralink-firmware.txt
 rt2870sta:	LICENCE.ralink-firmware.txt
-usbdux/usbduxfast/usbduxsigma: GPL-2
+usbdux/usbduxfast/usbduxsigma: GPL-2.0
 xc4000:		LICENCE.xc4000
 xc5000:		LICENCE.xc5000 LICENCE.xc5000c
 dib0700:	LICENSE.dib0700
@@ -88,13 +77,12 @@ amdxdna:	LICENSE.amdnpu
 amd_pmf:	LICENSE.amd_pmf
 s2255drv:	LICENCE.sensoray
 rtl8192e:
-lgs8gxx:
 ib_qib:		LICENSE.ib_qib
 qed:		LICENSE.qed
 ueagle-atm:	LICENCE.ueagle-atm4-firmware LICENCE.ueagle
 vxge:		LICENSE.vxge
 brcmsmac:	LICENCE.broadcom_bcm43xx
-brcmfmac:	LICENCE.broadcom_bcm43xx LICENCE.cypress GPL-2
+brcmfmac:	LICENCE.broadcom_bcm43xx LICENCE.cypress GPL-2.0
 wl1251:		LICENCE.wl1251
 wl12xx:		LICENCE.ti-connectivity
 wl18xx:		LICENCE.ti-connectivity
@@ -131,10 +119,10 @@ ath12k:		ath12k/WCN7850/hw2.0/Notice.txt LICENSE.QualcommAtheros_ath10k
 myri10ge:	LICENCE.myri10ge_firmware
 drxk:		LICENSE.drxk
 ene-ub6250:	LICENCE.ene_firmware
-isci:		GPL-2
+isci:		GPL-2.0
 ar5523:		LICENCE.atheros_firmware
 s5p-mfc:	LICENSE.s5p-mfc
-carl9170:	GPL-2
+carl9170:	GPL-2.0
 snd-hda-codec-ca0132: LICENCE.ca0132
 btusb:		LICENCE.ibt_firmware LICENCE.rtlwifi_firmware.txt
 btmtk_usb:	LICENCE.ralink_a_mediatek_company_firmware
@@ -159,7 +147,7 @@ snd-soc-skl:	LICENCE.adsp_sst
 smsmdtv:	LICENCE.siano
 xhci-tegra:	LICENCE.nvidia
 tegra-vic:	LICENCE.nvidia
-atusb:		GPL-2 GPL-3
+atusb:		GPL-2.0 GPL-3.0-only
 qca:		LICENSE.QualcommAtheros_ath10k qca/NOTICE.txt
 liquidio:	LICENCE.cavium_liquidio
 nitrox:		LICENCE.cavium

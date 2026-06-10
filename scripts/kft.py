@@ -88,6 +88,7 @@ def walk_whence(tree, topic, process, process_link=None):
             l = licenses.get(driver)
             if l != None:
                 for t in l:
+                    t = 'LICENSES/' + t
                     if t in tree:
                         process(t)
             continue

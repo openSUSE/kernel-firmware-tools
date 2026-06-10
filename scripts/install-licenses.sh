@@ -43,7 +43,7 @@ list=$(list_license)
 for l in $list; do
     b=$(basename $l)
     $verbose "Copying $l for license"
-    install -c -D -m 0644 $l $dir/$b
+    install -c -D -m 0644 LICENSES/$l $dir/$b
 done
 
 exit 0
