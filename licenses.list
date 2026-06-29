@@ -206,6 +206,7 @@ cs42l43:	LICENSE.cirrus
 cs42l45:	LICENSE.cirrus
 mtk-sof:	LICENCE.mediatek
 nxp-sr1xx:	LICENSE.nxp
+nxpwifi:	LICENSE.nxp
 btnxpuart:	LICENSE.nxp
 amlogic:	LICENSE.amlogic
 powervr:	LICENSE.powervr

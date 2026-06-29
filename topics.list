@@ -214,6 +214,7 @@ cs42l43:	sound
 cs42l45:	sound
 mtk-sof:	sound		snd-sof-mt8186 snd-sof-mt8195
 nxp-sr1xx:	platform
+nxpwifi:	platform
 btnxpuart:	platform
 amlogic:	bluetooth
 powervr:	platform
