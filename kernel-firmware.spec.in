@@ -52,8 +52,9 @@ Conflicts:      (filesystem without may-perform-usrmerge)
 %autosetup -p1
 tar xf %{S:1} --strip-components=1
 # strip down WHENCE for the topic
-scripts/strip-topic-whence.sh @@TOPIC@@ < WHENCE > WHENCE.new
-mv WHENCE.new WHENCE
+cp WHENCE WHENCE-dist
+scripts/strip-topic-whence.sh @@TOPIC@@ < WHENCE-dist > WHENCE
+
 @@SETUP@@
 
 %build
@@ -64,6 +65,7 @@ mv WHENCE.new WHENCE
 scripts/install-licenses.sh @@TOPIC@@ %{buildroot}%{_licensedir}/%{name}
 install -c -D -m 0644 WHENCE %{buildroot}%{_licensedir}/%{name}/WHENCE
 install -c -D -m 0644 README.md %{buildroot}%{_docdir}/%{name}/README.md
+scripts/strip-topic-whence.sh -t %{buildroot}%{_docdir}/%{name} @@TOPIC@@ < WHENCE-dist
 
 @@POST@@
 
