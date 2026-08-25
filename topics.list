@@ -218,6 +218,7 @@ nxpwifi:	platform
 btnxpuart:	platform
 amlogic:	bluetooth
 powervr:	platform
+ti-tas257x:	sound		snd-hda-scodec-tas2781-i2c
 ti-tas2781:	sound		snd-hda-scodec-tas2781-i2c
 ti-tas2783:	sound		snd-hda-scodec-tas2781-i2c
 ti-tas2563:	sound		snd-hda-scodec-tas2781-i2c

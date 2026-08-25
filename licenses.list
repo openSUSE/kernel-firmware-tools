@@ -210,6 +210,7 @@ nxpwifi:	LICENSE.nxp
 btnxpuart:	LICENSE.nxp
 amlogic:	LICENSE.amlogic
 powervr:	LICENSE.powervr
+ti-tas257x:	LICENCE.ti-tspa
 ti-tas2781:	LICENCE.ti-tspa
 ti-tas2783:	LICENCE.ti-tspa
 ti-tas2563:	LICENCE.ti-tspa
