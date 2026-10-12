@@ -236,5 +236,7 @@ sdx35:		qcom
 pcie-rcar-gen4:	platform
 PCM6240:	sound		snd-soc-pcm6240
 mm81x:		network		mm81x_usb mm81x_sdio
+btaic:		bluetooth
+aic:		usb-network
 Qualcomm:	sound		snd-soc-sc8280xp snd-soc-sm8250 snd-soc-x1e80100
 ast:		platform
