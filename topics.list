@@ -150,6 +150,10 @@ snd-soc-skl:	sound
 smsmdtv:	media
 xhci-tegra:	nvidia
 tegra-vic:	nvidia		tegra_drm
+tegra-nvenc:	nvidia
+tegra-nvdec:	nvidia
+tegra-nvjpg:	nvidia
+tegra-ofa:	nvidia
 atusb:		usb-network
 qca:		bluetooth	btqca
 btqca:		bluetooth

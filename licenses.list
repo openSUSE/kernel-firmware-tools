@@ -147,6 +147,10 @@ snd-soc-skl:	LICENCE.adsp_sst
 smsmdtv:	LICENCE.siano
 xhci-tegra:	LICENCE.nvidia
 tegra-vic:	LICENCE.nvidia
+tegra-nvenc:	LICENCE.nvidia
+tegra-nvdec:	LICENCE.nvidia
+tegra-nvjpg:	LICENCE.nvidia
+tegra-ofa:	LICENCE.nvidia
 atusb:		GPL-2.0 GPL-3.0-only
 qca:		LICENSE.QualcommAtheros_ath10k qca/NOTICE.txt
 liquidio:	LICENCE.cavium_liquidio
