@@ -167,6 +167,7 @@ mt8196:		LICENCE.mediatek
 mtk_scp:	LICENCE.mediatek
 btmtk:		LICENCE.mediatek
 rk3399-dptx:	LICENCE.rockchip
+phy-rockchip-snps-pcie3: LICENCE.rockchip
 mt76x0:		LICENCE.mediatek
 mt76x2e:	LICENCE.ralink_a_mediatek_company_firmware
 mt76x2u:	LICENCE.mediatek

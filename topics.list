@@ -171,6 +171,7 @@ mt8196:		mediatek
 mtk_scp:	mediatek
 btmtk:		mediatek	btmtk btmtkuart btmtksdio
 rk3399-dptx:	platform
+phy-rockchip-snps-pcie3: platform
 mt76x0:		mediatek	mt76x0u mt76x0e
 mt76x2e:	mediatek	mt76x2e mt76x2u
 mt76x2u:	mediatek
