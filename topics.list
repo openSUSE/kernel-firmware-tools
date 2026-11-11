@@ -74,6 +74,7 @@ airoha-npu-7583:	network		airoha_npu
 amdgpu:		amdgpu
 amdxdna:	platform
 amd_pmf:	platform
+amd-sof:	sound		snd-sof-amd-acp7x
 s2255drv:	platform
 rtl8192e:	realtek		r8192e_pci
 ib_qib:		qlogic
