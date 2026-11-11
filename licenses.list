@@ -74,6 +74,7 @@ airoha-npu-7583:	LICENSE.airoha
 amdgpu:		LICENSE.amdgpu
 amdxdna:	LICENSE.amdnpu
 amd_pmf:	LICENSE.amd_pmf
+amd-sof:	LICENSE.amdsof
 s2255drv:	LICENCE.sensoray
 rtl8192e:
 ib_qib:		LICENSE.ib_qib
