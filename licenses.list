@@ -71,6 +71,7 @@ an8811hb:	LICENSE.airoha
 airoha-npu-7581:	LICENSE.airoha
 airoha-npu-7581-mt7996:	LICENSE.airoha
 airoha-npu-7583:	LICENSE.airoha
+aw88399:	LICENSE.awinic
 amdgpu:		LICENSE.amdgpu
 amdxdna:	LICENSE.amdnpu
 amd_pmf:	LICENSE.amd_pmf
