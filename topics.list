@@ -71,6 +71,7 @@ an8811hb:	network
 airoha-npu-7581:	network		airoha_npu
 airoha-npu-7581-mt7996:	network		airoha_npu
 airoha-npu-7583:	network		airoha_npu
+aw88399:	sound		snd-soc-aw88399
 amdgpu:		amdgpu
 amdxdna:	platform
 amd_pmf:	platform
